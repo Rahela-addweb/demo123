@@ -5,11 +5,9 @@ dependencies:
   enforced:
     module:
       - webform
-#   module:
-#     - webform_ajax
-# third_party_settings:
-#   webform_ajax:
-#     webform_ajax_enabled: 0
+third_party_settings:
+  webform_ajax:
+    webform_ajax_enabled: 0
 _core:
   default_config_hash: s9QwNFnXhcTFmBZLjD5-7dOwcHv3Bh2dfsGN-cR7TgY
 open: null

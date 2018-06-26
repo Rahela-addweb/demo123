@@ -28,4 +28,22 @@ content:
   sharethis:
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  field__service_banner_title: true
+  field_image_services: true
+  field_our_services: true
+  field_serives_banner_bottom_imag: true
+  field_service_banner_background_: true
+  field_service_banner_description: true
+  field_service_banner_icon_image: true
+  field_service_banner_subtitle: true
+  field_service_page_banner_filter: true
+  field_service_process_descri: true
+  field_service_process_image: true
+  field_service_process_points: true
+  field_service_process_title: true
+  field_service_tags: true
+  field_service_value_description: true
+  field_service_value_title: true
+  field_service_values: true
+  field_services_banner_header: true

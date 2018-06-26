@@ -18,6 +18,8 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   contact: 0
   contextual: 0
   crop: 0
@@ -86,7 +88,6 @@ module:
   search: 0
   serialization: 0
   sharethis: 0
-  shield: 0
   shortcut: 0
   simple_megamenu: 0
   simple_sitemap: 0

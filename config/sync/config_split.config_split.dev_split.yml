@@ -1,0 +1,15 @@
+uuid: b3fd180b-f1a1-4366-8eed-322be588e26e
+langcode: en
+status: true
+dependencies: {  }
+id: dev_split
+label: 'dev split'
+folder: ../config/sync-dev
+module:
+  shield: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -28,4 +28,19 @@ content:
   sharethis:
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  field_data_safe_detail: true
+  field_data_safe_image: true
+  field_data_safe_title: true
+  field_feature: true
+  field_feature_main_image: true
+  field_join_us: true
+  field_one_click_description: true
+  field_one_click_title: true
+  field_school_management_detail: true
+  field_school_management_images: true
+  field_school_management_title: true
+  field_school_mangement_slider: true
+  field_support_detail: true
+  field_support_image: true
+  field_support_title: true
