@@ -1,0 +1,22 @@
+uuid: bf64275e-a64d-4042-a024-f300afe092d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - addweb
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: addweb_messages
+theme: addweb
+region: header
+weight: -20
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 8358f0e5-fb11-4d6f-8199-ded872904753
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_award_achieve_decription
+    - paragraphs.paragraphs_type.awards_and_achievements_banner
+  module:
+    - text
+id: paragraph.awards_and_achievements_banner.field_award_achieve_decription
+field_name: field_award_achieve_decription
+entity_type: paragraph
+bundle: awards_and_achievements_banner
+label: 'Awards and Achievements Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

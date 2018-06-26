@@ -1,0 +1,12 @@
+uuid: 929cdb2b-919b-48f3-92fb-a622370bddf7
+langcode: en
+status: true
+dependencies: {  }
+label: 'News List'
+id: news_list
+description: ''
+aspect_ratio: '336:141'
+soft_limit_width: 336
+soft_limit_height: 141
+hard_limit_width: 336
+hard_limit_height: 141

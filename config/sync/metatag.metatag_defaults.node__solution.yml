@@ -1,0 +1,25 @@
+uuid: 479b576c-54f6-4ebd-9d2c-5030def1a806
+langcode: en
+status: true
+dependencies: {  }
+id: node__solution
+label: 'Content: Solution'
+tags:
+  shortlink: '[current-page:url:unaliased]'
+  description: '[node:summary]'
+  robots: 'index, follow'
+  title: '[node:title] | [site:name]'
+  canonical_url: '[current-page:url:absolute]'
+  og_image_url: '[node:field_image_solution]'
+  og_image: '[node:field_image_solution]'
+  og_description: '[node:title]'
+  og_updated_time: '[node:changed:custom:c]'
+  og_url: '[current-page:url:absolute]'
+  article_published_time: '[node:created:custom:c]'
+  article_modified_time: '[node:changed:custom:c]'
+  og_title: '[node:title]'
+  og_type: Solution
+  twitter_cards_title: '[node:title]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_type: summary
+  twitter_cards_image: '[node:field_image_solution]'

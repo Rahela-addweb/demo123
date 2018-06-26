@@ -1,0 +1,19 @@
+uuid: 118dc2f7-7572-4102-b192-fa5f25aa0731
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_banner
+    - field.storage.block_content.field_banner_subtitle
+id: block_content.header_banner.field_banner_subtitle
+field_name: field_banner_subtitle
+entity_type: block_content
+bundle: header_banner
+label: 'Banner Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

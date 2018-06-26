@@ -1,0 +1,35 @@
+uuid: f5d3024c-dc05-408a-9e09-2e359dd93884
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:56a406b9-b339-4bef-9063-4882b94d2a58'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: hire-us
+id: hireus
+theme: addweb
+region: content_bottom
+weight: -25
+provider: null
+plugin: 'block_content:56a406b9-b339-4bef-9063-4882b94d2a58'
+settings:
+  id: 'block_content:56a406b9-b339-4bef-9063-4882b94d2a58'
+  label: 'Hire Us!'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/portfolio\r\n<front>\r\n/portfolio/*\r\n/news\r\n/hire-developer\r\n/services\r\n/solutions\r\n/about\r\n/awards-and-achievements\r\n/client-in-map\r\n/with-and-for-society\r\n/customer-testimonials"
+    negate: false
+    context_mapping: {  }

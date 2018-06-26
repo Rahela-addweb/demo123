@@ -1,0 +1,21 @@
+uuid: 1072668b-49bb-4c23-846d-3b1521e93f91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_value_descriotion
+    - paragraphs.paragraphs_type.service_values
+  module:
+    - text
+id: paragraph.service_values.field_value_descriotion
+field_name: field_value_descriotion
+entity_type: paragraph
+bundle: service_values
+label: 'Value Descriotion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

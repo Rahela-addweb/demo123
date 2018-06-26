@@ -1,0 +1,24 @@
+uuid: 120091ae-c41d-443f-975b-924c657bd6f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.school_mangement_slider
+  module:
+    - crop
+name: school_mangement_slider
+label: 'School Mangement Slider'
+effects:
+  12bc4e82-4e85-49ab-a01e-1d68c8d97754:
+    uuid: 12bc4e82-4e85-49ab-a01e-1d68c8d97754
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: school_mangement_slider
+  6691beb3-98ba-4fa2-94c6-2c3af7479203:
+    uuid: 6691beb3-98ba-4fa2-94c6-2c3af7479203
+    id: image_resize
+    weight: 2
+    data:
+      width: 1940
+      height: 1220

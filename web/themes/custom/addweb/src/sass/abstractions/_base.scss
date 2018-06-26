@@ -1,0 +1,132 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Base css of site
+ */
+
+* {
+  line-height: normal;
+  vertical-align: top;
+}
+
+body {
+  /*font-family: $segoeui-regular;*/
+  margin: 0;
+  color: $black-65;
+  font-size: 16px;
+  font-family: $opensans-regular;
+}
+
+/*a {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}*/
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $opensans-semibold;
+}
+
+h2 {
+  color: $black;
+  text-transform: uppercase;
+}
+
+ul,
+ol {
+  margin: 0 0 20px 20px;
+  padding-left: 0;
+  li {
+    color: $black-65;
+    font-size: 16px;
+    line-height: 27px;
+    list-style-type: square;
+  }
+}
+
+p {
+  /*margin: 0;*/
+}
+
+video {
+  height: auto !important;
+  width: 100% !important;
+}
+
+button,
+.btn {
+  border: 1px solid #06486F;
+  @include background (#155C86, #155C86, #085786, #085786);
+  /*background-color: $dark-blue;*/
+  @include border-radius(2px);
+  color: $white;
+  font-size: 15px;
+  /*font-family: $segoeui-semibold;*/
+  text-transform: uppercase;
+  &:hover {
+    @include background (#0A4B72, #0A4B72, #0D4769, #0D4769);
+  }
+}
+
+#block-addweb-local-tasks {
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 10px;
+  background: $dark-blue;
+  a {
+    padding: 0 10px;
+    color: $white;
+  }
+}
+
+
+p {
+  color: $black-65;
+  font-size: 16px;
+  line-height: 27px;
+  font-family: $opensans-regular;
+}
+strong,
+b {
+  font-weight: normal;
+  font-family: $opensans-bold;
+}
+i,
+em {
+  font-family: $opensans-italic;
+}
+h2 {
+  color: $black-31;
+  font-size: 22px;
+  font-family: $opensans-semibold;
+}
+a {
+  color: $blue-0b;
+  /*font-family: $opensans-semibold;*/
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    color: $gray-4a;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: $blue-0b;
+    text-decoration: none;
+  }
+}

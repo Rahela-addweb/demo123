@@ -1,0 +1,40 @@
+uuid: 6b66e8c6-5f72-4338-a539-ffb73a1033bd
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - twitter_block
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: twitterblock
+theme: addweb
+region: footer
+weight: -25
+provider: null
+plugin: twitter_block
+settings:
+  id: twitter_block
+  label: 'Twitter block'
+  provider: twitter_block
+  label_display: '0'
+  widget_id: '425941124394397696'
+  theme: ''
+  link_color: ''
+  width: '270'
+  height: ''
+  chrome:
+    noheader: noheader
+    nofooter: nofooter
+    noborders: noborders
+    transparent: transparent
+    noscrollbar: '0'
+  border_color: ''
+  language: ''
+  tweet_limit: '2'
+  related: AddWebSolution
+  polite: polite
+visibility: {  }

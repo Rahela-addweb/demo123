@@ -1,0 +1,21 @@
+uuid: ce833097-9bd0-4a63-a0ab-786aef95b601
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_solution_description
+    - paragraphs.paragraphs_type.solution
+  module:
+    - text
+id: paragraph.solution.field_solution_description
+field_name: field_solution_description
+entity_type: paragraph
+bundle: solution
+label: 'Solution Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

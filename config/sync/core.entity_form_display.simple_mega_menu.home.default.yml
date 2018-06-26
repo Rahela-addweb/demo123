@@ -1,0 +1,48 @@
+uuid: f3806bdd-7d0f-49bb-bb33-0ac7d60f7881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.simple_mega_menu.home.field_body
+    - simple_megamenu.simple_mega_menu_type.home
+  module:
+    - text
+id: simple_mega_menu.home.default
+targetEntityType: simple_mega_menu
+bundle: home
+mode: default
+content:
+  field_body:
+    weight: 122
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

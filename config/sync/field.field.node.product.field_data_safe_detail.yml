@@ -1,0 +1,21 @@
+uuid: 6fe05dca-6ce9-4b2a-a0e5-26988420198f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_safe_detail
+    - node.type.product
+  module:
+    - text
+id: node.product.field_data_safe_detail
+field_name: field_data_safe_detail
+entity_type: node
+bundle: product
+label: 'Data Safe Detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

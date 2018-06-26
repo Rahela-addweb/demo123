@@ -1,0 +1,29 @@
+uuid: 5fed4396-e7b6-4b30-8854-3df18f36e5e1
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ee1b2dc3-f3c1-490f-8350-7c7ec9c3daaa'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: napcode
+theme: addweb
+region: footer
+weight: -26
+provider: null
+plugin: 'block_content:ee1b2dc3-f3c1-490f-8350-7c7ec9c3daaa'
+settings:
+  id: 'block_content:ee1b2dc3-f3c1-490f-8350-7c7ec9c3daaa'
+  label: 'NAP Code'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

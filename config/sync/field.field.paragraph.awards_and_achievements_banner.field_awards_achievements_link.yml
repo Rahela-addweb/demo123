@@ -1,0 +1,23 @@
+uuid: 92926f44-7fb9-4c23-a96b-68b4bb85d105
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_awards_achievements_link
+    - paragraphs.paragraphs_type.awards_and_achievements_banner
+  module:
+    - link
+id: paragraph.awards_and_achievements_banner.field_awards_achievements_link
+field_name: field_awards_achievements_link
+entity_type: paragraph
+bundle: awards_and_achievements_banner
+label: 'Awards and Achievements Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

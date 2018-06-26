@@ -1,0 +1,40 @@
+uuid: ebe02d17-a0be-4d61-adc2-be339b9392ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_header_info.field_number_about_us
+    - field.field.paragraph.about_us_header_info.field_title_about_us_header
+    - field.field.paragraph.about_us_header_info.field_title_sub_text_about_us
+    - paragraphs.paragraphs_type.about_us_header_info
+  module:
+    - text
+id: paragraph.about_us_header_info.default
+targetEntityType: paragraph
+bundle: about_us_header_info
+mode: default
+content:
+  field_number_about_us:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_title_about_us_header:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title_sub_text_about_us:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,58 @@
+diff --git a/core/modules/views/src/Plugin/views/argument/StringArgument.php b/core/modules/views/src/Plugin/views/argument/StringArgument.php
+index 6058d66..cbcec41 100644
+--- a/core/modules/views/src/Plugin/views/argument/StringArgument.php
++++ b/core/modules/views/src/Plugin/views/argument/StringArgument.php
+@@ -43,6 +43,7 @@ protected function defineOptions() {
+     $options['case'] = ['default' => 'none'];
+     $options['path_case'] = ['default' => 'none'];
+     $options['transform_dash'] = ['default' => FALSE];
++    $options['transform_underscore'] = ['default' => FALSE];
+     $options['break_phrase'] = ['default' => FALSE];
+ 
+     if (!empty($this->definition['many to one'])) {
+@@ -114,6 +115,13 @@ public function buildOptionsForm(&$form, FormStateInterface $form_state) {
+       '#group' => 'options][more',
+     ];
+ 
++    $form['transform_underscore'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Transform dashes to underscore in URL'),
++      '#default_value' => $this->options['transform_underscore'],
++      '#group' => 'options][more',
++    ];
++
+     if (!empty($this->definition['many to one'])) {
+       $form['add_table'] = [
+         '#type' => 'checkbox',
+@@ -202,6 +210,10 @@ public function query($group_by = FALSE) {
+       $argument = strtr($argument, '-', ' ');
+     }
+ 
++    if (!empty($this->options['transform_underscore'])) {
++      $argument = strtr($argument, '-', '_');
++    }
++
+     if (!empty($this->options['break_phrase'])) {
+       $this->unpackArgumentValue();
+     }
+@@ -268,6 +280,9 @@ public function summaryArgument($data) {
+     if (!empty($this->options['transform_dash'])) {
+       $value = strtr($value, ' ', '-');
+     }
++    if (!empty($this->options['transform_underscore'])) {
++      $value = strtr($value, '-', '_');
++    }
+     return $value;
+   }
+ 
+@@ -290,6 +305,10 @@ public function title() {
+       $this->argument = strtr($this->argument, '-', ' ');
+     }
+ 
++    if (!empty($this->options['transform_underscore'])) {
++      $this->argument = strtr($this->argument, '_', '-');
++    }
++
+     if (!empty($this->options['break_phrase'])) {
+       $this->unpackArgumentValue();
+     }

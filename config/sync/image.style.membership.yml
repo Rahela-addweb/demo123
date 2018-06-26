@@ -1,0 +1,15 @@
+uuid: 35d17b80-a617-43cc-b403-40f62484f716
+langcode: en
+status: true
+dependencies: {  }
+name: membership
+label: membership
+effects:
+  1cd73f15-184d-47ad-96e1-caf60519a8f5:
+    uuid: 1cd73f15-184d-47ad-96e1-caf60519a8f5
+    id: image_scale
+    weight: 2
+    data:
+      width: 140
+      height: null
+      upscale: true

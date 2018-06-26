@@ -1,0 +1,21 @@
+uuid: 6b86442d-009f-4a5e-bd6a-1f346de5b521
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_banner_description
+    - node.type.services
+  module:
+    - text
+id: node.services.field_service_banner_description
+field_name: field_service_banner_description
+entity_type: node
+bundle: services
+label: 'Service Banner Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

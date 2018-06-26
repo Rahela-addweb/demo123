@@ -1,0 +1,25 @@
+uuid: 7b86bcc8-de1e-47d8-8a3c-385db3907479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_image_link
+    - simple_megamenu.simple_mega_menu_type.megamenu
+  module:
+    - link
+_core:
+  default_config_hash: _655JUVeh44gBDDZbYRO6GgAZonvtnmSfbwmj8Yq0JQ
+id: simple_mega_menu.megamenu.field_image_link
+field_name: field_image_link
+entity_type: simple_mega_menu
+bundle: megamenu
+label: 'Image link'
+description: 'The call to action link which wrap the image.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

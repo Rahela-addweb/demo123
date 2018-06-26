@@ -1,0 +1,22 @@
+uuid: 20520997-7295-44a9-bd1c-263f03be545c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_know_more_about_us
+    - node.type.page
+  module:
+    - text
+id: node.page.field_know_more_about_us
+field_name: field_know_more_about_us
+entity_type: node
+bundle: page
+label: 'know more about us'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

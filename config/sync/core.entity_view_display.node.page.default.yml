@@ -1,0 +1,147 @@
+uuid: fad28d40-6488-40b2-a6fa-9f8f01b3eb75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.field_about_us_header_section
+    - field.field.node.page.field_awards_achievements_banner
+    - field.field.node.page.field_banner_image
+    - field.field.node.page.field_business_with_addweb_solut
+    - field.field.node.page.field_creation_and_membership
+    - field.field.node.page.field_display_type
+    - field.field.node.page.field_drupal_is_our_life
+    - field.field.node.page.field_google_certification_image
+    - field.field.node.page.field_home_page
+    - field.field.node.page.field_know_more_about_us
+    - field.field.node.page.field_membership_image_about_us
+    - field.field.node.page.field_paragraph_type
+    - field.field.node.page.field_seo_description
+    - field.field.node.page.field_seo_title
+    - field.field.node.page.field_service_metatag
+    - node.type.page
+  module:
+    - entity_reference_revisions
+    - image
+    - metatag
+    - text
+    - user
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_about_us_header_section:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_awards_achievements_banner:
+    type: entity_reference_revisions_entity_view
+    weight: 12
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_business_with_addweb_solut:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_creation_and_membership:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_drupal_is_our_life:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_google_certification_image:
+    weight: 15
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_home_page:
+    weight: 14
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_know_more_about_us:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_membership_image_about_us:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph_type:
+    type: entity_reference_revisions_entity_view
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_service_metatag:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_banner_image: true
+  field_display_type: true
+  field_seo_description: true
+  field_seo_title: true

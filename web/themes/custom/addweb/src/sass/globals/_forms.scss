@@ -1,0 +1,148 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Form SCSS
+ */
+
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+textarea,
+select,
+.form-control {
+  height: 35px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  border: 2px solid $black-c8;
+  @include border-radius(4px);
+  background-color: $white;
+  @include box-shadow(none);
+}
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus,
+input[type='tel']:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+  border-color: $black-c8;
+  @include box-shadow(0 1px 15px rgba(0, 0, 0, .5));
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+textarea {
+  @include appearance(none);
+}
+
+/* Placeholder design */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $black-44;
+  /*font-size: 18px;*/
+  @media (max-width: 1024px) {
+    /*line-height: 14px;*/
+  }
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $black-44;
+  /*font-size: 18px;*/
+  @media (max-width: 1024px) {
+    /*line-height: 14px;*/
+  }
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $black-44;
+  /*font-size: 18px;*/
+  @media (max-width: 1024px) {
+    /*line-height: 14px;*/
+  }
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $black-44;
+  /*font-size: 18px;*/
+  @media (max-width: 1024px) {
+    /*line-height: 14px;*/
+  }
+}
+/* End */
+
+
+/* Button CSS */
+a.views-more-link,
+.button-primary,
+.btn-default,
+.btn-hire a,
+.blue-btn {
+  display: inline-block;
+  padding: 5px 22px;
+  border: 2px solid #06486F;
+  /*background-color: transparent;*/
+  @include background (#155C86, #155C86, #085786, #085786);
+  @include border-radius(4px);
+  color: $white;
+  /*font-family: $segoeui-semibold;*/
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  @include box-shadow(none);
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:visited,
+  &:active:hover,
+  &:active:focus {
+    @include background (#0A4B72, #0A4B72, #0D4769, #0D4769);
+    /*background-color: $black-22;*/
+    color: $white;
+    outline: none;
+  }
+}
+.blue-btn,
+.form-submit {
+  min-width: 185px;
+  padding: 12px 22px;
+  border-color: $blue-007;
+  background: $blue-007;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:visited,
+  &:active:hover,
+  &:active:focus {
+    border-color: #0A4B72;
+    color: $white;
+    outline: none;
+  }
+}
+.btn-plain {
+  display: inline-block;
+  padding: 8px 15px;
+  border: 1px solid $blue-0b;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: capitalize;
+  @include border-radius(3px);
+  &:hover {
+    border-color: $gray-4a;
+    text-decoration: none;
+  }
+}

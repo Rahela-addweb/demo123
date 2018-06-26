@@ -1,0 +1,32 @@
+uuid: eb478cff-b4f4-40d8-863a-2d0f644a1003
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - search
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: addweb_search
+theme: addweb
+region: sidebar_second
+weight: -19
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /portfolio
+    negate: false
+    context_mapping: {  }

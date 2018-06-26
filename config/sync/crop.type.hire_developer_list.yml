@@ -1,0 +1,12 @@
+uuid: 572e7f6b-19fe-4a2a-8509-5f4479391c3f
+langcode: en
+status: true
+dependencies: {  }
+label: 'Hire Developer List'
+id: hire_developer_list
+description: ''
+aspect_ratio: '80:80'
+soft_limit_width: 80
+soft_limit_height: 80
+hard_limit_width: 80
+hard_limit_height: 80

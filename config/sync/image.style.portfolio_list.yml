@@ -1,0 +1,22 @@
+uuid: a9ecbb79-b6e2-4578-a4b9-60bec2dc4e7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: portfolio_list
+label: 'Portfolio List'
+effects:
+  a9a82f8d-a8ab-4fb6-b5e4-1bfa20df98dc:
+    uuid: a9a82f8d-a8ab-4fb6-b5e4-1bfa20df98dc
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 354
+      height: 255
+  d3f3d795-8532-4663-bf6d-d68d45028887:
+    uuid: d3f3d795-8532-4663-bf6d-d68d45028887
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: portfolio_list

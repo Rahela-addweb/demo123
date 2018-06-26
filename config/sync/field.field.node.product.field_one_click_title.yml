@@ -1,0 +1,19 @@
+uuid: 0e713924-7e39-4445-8c8a-00253c5e4b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_one_click_title
+    - node.type.product
+id: node.product.field_one_click_title
+field_name: field_one_click_title
+entity_type: node
+bundle: product
+label: 'One Click Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: 7f3a6a17-036f-4c34-b2ed-70b14523f8a3
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_header_info
+label: 'About Us Header Info'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

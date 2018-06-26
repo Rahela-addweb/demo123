@@ -1,0 +1,172 @@
+<div class="rating_outer">
+ <div class="container">
+  <div class="row rating_bx">
+   <div class="snippet col-md-8 col-sm-12 col-xs-12">
+     <div class="rating-section">
+      <div class="rating-view">                       
+        <div class="rateit-wrap">
+    <div id="rateYo1" class="jq-ry-container" style="width: 73px;"></div>
+         <div class="initail-rate">
+         {% if flag == 1 %}
+          <span class="rate-btn rateYo2 edited already_rated" type="hidden">Already Rated</span>
+          {% elseif flag == 2 %}
+          <span class="rate-btn enable">Rate us</span>
+          {% elseif flag == 3 %}
+          <span class="rate-btn enable">Rate us</span>
+           {% elseif flag == 0 %}
+          <span class="rate-btn enable">Rate us</span>
+          {% endif %}
+      <!--  <span class="rate-btn rateYo2 edited already_rated" type="hidden">Already Rated</span> -->
+         </div>
+        </div>
+       <div class="overall">
+        <span itemscope="" itemtype="http://data-vocabulary.org/Review-aggregate">
+         <span itemprop="rating" itemscope itemtype="http://data-vocabulary.org/Rating">
+          <input type="hidden" name="post_id" id="rating_post_id">
+                  
+           <input type="hidden" name="currentrate" id="currentrate" value="{{ client_count }}">
+            <strong itemprop="average" id="ratingValue">4.9 </strong>
+            out of <strong itemprop="best">5.0 </strong>
+          </span>&nbsp; for &nbsp;
+          <span itemprop="itemreviewed">Software Development Services </span>   
+          &nbsp; by &nbsp;<span class="client-project" style="display:block !important;">
+          {% if flag == 1 %}
+          <span itemprop="votes" id="totalClient" style="background-color: #ff5722; color: white;">{{ client_count }}</span>
+          {% elseif flag == 2 %}
+          <span itemprop="votes" id="totalClient" style="background-color: #ff5722; color: white;">{{ client_count }}</span>
+          {% elseif flag == 3 %}
+          <span itemprop="votes" id="totalClient" style="background-color: #ff5722; color: white;">1231</span>
+          {% elseif flag == 0 %}
+          <span itemprop="votes" id="totalClient" style="background-color: #ff5722; color: white;">1231</span>
+          {% endif %}
+          clients on over 3800+ projects</span>.
+        </span>
+        <input type="hidden" name="rating_page_url" value="{{ current_rating_url }}" id="rating_page_url">
+       </div>
+      </div>
+        <script type="text/javascript">
+            var allreadyRated = '1';
+            var ratingValue = '4.7';   
+        </script>
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+  
+
+
+
+
+<style>
+    .overall > span {
+  color: #fff;
+}
+
+.rating-view .overall {
+  display: inline-block;
+  margin-top: 2px;
+  font-family: lato; font:13px lato;
+}
+
+.rating_outer .social-btn {
+   margin-top: 7px;
+  
+}
+
+.rating_outer {
+  padding: 16px 0 16px;
+ 
+}
+
+.rating_outer {
+  background: #424242 none repeat scroll 0 0;
+  display: block;
+  float: left;
+  margin-top: 0;
+  padding-bottom: 25px !important;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 16px;
+  width: 100%;
+}
+   
+
+.overall > span {
+  display: inline-flex;
+  padding:5px;
+  width: 100%;
+}
+    
+.rate-btn .edited {
+    background: url(/home/addweb/Downloads/thumbsup.png) no-repeat 0 center;
+    background-size: 18px auto;
+    font-size: 12px;
+    padding-left: 26px;
+    padding-top: 3px;
+    color: #939393;
+  }
+
+
+.rateit-wrap {
+   float: left;
+}
+
+@media only screen and (max-width:1199px) {
+.rating-view .overall {
+  display: inline-block;
+  float: left;
+  font: 11px lato;
+  margin-top: 2px;
+  padding: 8px 0 9px;
+  text-align: center;
+}
+/*}*/ /* add  */
+    
+
+    
+@media only screen and (max-width:767px) {
+.rateit-wrap {
+   float:none;
+}
+
+.rating-view .overall {
+  display: inline-block;
+  float: left;
+  font:9px lato;
+  margin-top: 2px;
+  padding: 22px 0 1px;
+  text-align: center;
+  width: 100%;
+}
+  
+  }
+  
+@media only screen and (max-width:479px) {
+.rating_outer .social-btn {
+  margin-top:9px;
+}
+
+.overall > span {
+  display: none;
+  padding: 5px;
+  width: 100%;
+}
+    
+.rating-view .overall {
+ padding: 0 0 1px;
+  text-align: center;
+ 
+}    
+    
+.get-in-touch {
+   padding-bottom: 9px;
+  
+}
+    
+  .rateit-wrap {
+    display: none;
+    float: none;
+  }
+}
+</style>

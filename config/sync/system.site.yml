@@ -1,0 +1,15 @@
+uuid: 5515f956-6b68-4d52-99c9-9700cf10cf8a
+name: 'AddWeb Solution'
+mail: johnnyharpertesting1@gmail.com
+slogan: ''
+page:
+  403: /node/461
+  404: /node/460
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

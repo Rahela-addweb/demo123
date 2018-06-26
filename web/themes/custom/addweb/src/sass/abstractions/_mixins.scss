@@ -1,0 +1,89 @@
+/**
+ * @file
+ * SCSS file for Mixins.
+ *
+ * All mixins used in SCSS are defined in this file.
+ */
+
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}:    -moz-calc(#{$expression});
+  #{$property}:         calc(#{$expression});
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+      -ms-box-shadow: $value;
+          box-shadow: $value;
+}
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+      -ms-appearance: $value;
+          appearance: $value;
+}
+@mixin transform($value) {
+  -webkit-transform: $value;
+     -moz-transform: $value;
+      -ms-transform: $value;
+          transform: $value;
+}
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+     -moz-justify-content: $value;
+      -ms-justify-content: $value;
+          justify-content: $value;
+}
+@mixin transition($value) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+      -ms-transition: $value;
+          transition: $value;
+}
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+@mixin flex-wrap($value) {
+  -webkit-flex-wrap: $value;
+     -moz-flex-wrap: $value;
+      -ms-flex-wrap: $value;
+          flex-wrap: $value;
+}
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+@mixin background($value, $value2, $value3, $value4) {
+  background: $value;
+  background: -moz-linear-gradient(top, $value 0%, $value2 5%, $value3 70%, $value4 100%);
+  background: -webkit-linear-gradient(top, $value 0%, $value2 5%, $value3 70%, $value4 100%);
+  background: linear-gradient(to bottom, $value 0%, $value2 5%, $value3 70%, $value4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$value', endColorstr='$value4',GradientType=0);
+}

@@ -1,0 +1,22 @@
+uuid: dd82d010-9661-4645-8928-55cfe11f2343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_with_addweb_solut
+    - node.type.page
+  module:
+    - text
+id: node.page.field_business_with_addweb_solut
+field_name: field_business_with_addweb_solut
+entity_type: node
+bundle: page
+label: 'Business With Addweb Solution'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

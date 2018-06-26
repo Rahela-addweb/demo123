@@ -1,0 +1,37 @@
+uuid: 1ccfe056-66ee-4610-ba4c-72dbcbdb9d2f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site map'
+  - 'access site-wide contact form'
+  - 'access tawk_to widget'
+  - 'access user profiles'
+  - 'administer user display'
+  - 'edit own blogs content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'use text format basic_html'
+  - 'use text format mailchimp_campaign'
+  - 'view disqus comments'
+  - 'view paragraph content about_us_certification_and_membe'
+  - 'view paragraph content careers'
+  - 'view paragraph content code'
+  - 'view paragraph content description'
+  - 'view paragraph content images'
+  - 'view paragraph content service_banner'
+  - 'view paragraph content service_values'
+  - 'view paragraph content services'
+  - 'view paragraph content solution'
+  - 'view published simple mega menu entities'

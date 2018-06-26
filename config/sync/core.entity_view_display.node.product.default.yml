@@ -1,0 +1,196 @@
+uuid: dc434dd5-6e5f-4f32-ad3a-375c27ad7d2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.body
+    - field.field.node.product.field_data_safe_detail
+    - field.field.node.product.field_data_safe_image
+    - field.field.node.product.field_data_safe_title
+    - field.field.node.product.field_feature
+    - field.field.node.product.field_feature_main_image
+    - field.field.node.product.field_join_us
+    - field.field.node.product.field_one_click_description
+    - field.field.node.product.field_one_click_title
+    - field.field.node.product.field_school_management_detail
+    - field.field.node.product.field_school_management_images
+    - field.field.node.product.field_school_management_title
+    - field.field.node.product.field_school_mangement_slider
+    - field.field.node.product.field_support_detail
+    - field.field.node.product.field_support_image
+    - field.field.node.product.field_support_title
+    - image.style.school_mangement_slider
+    - node.type.product
+  module:
+    - entity_reference_revisions
+    - field_formatter_class
+    - field_slideshow
+    - image
+    - text
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_data_safe_detail:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_data_safe_image:
+    weight: 103
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_data_safe_title:
+    weight: 104
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_feature_main_image:
+    weight: 106
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_join_us:
+    type: entity_reference_revisions_entity_view
+    weight: 107
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_one_click_description:
+    weight: 108
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_one_click_title:
+    weight: 109
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_school_management_detail:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_school_management_images:
+    weight: 111
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_school_management_title:
+    weight: 112
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_school_mangement_slider:
+    weight: 113
+    label: hidden
+    settings:
+      image_style: school_mangement_slider
+      image_link: ''
+      slideshow_caption: ''
+      slideshow_caption_link: ''
+      slideshow_fx: fade
+      slideshow_speed: '400'
+      slideshow_timeout: '4000'
+      slideshow_order: ''
+      slideshow_controls: '1'
+      slideshow_controls_position: after
+      slideshow_pager: ''
+      slideshow_pager_position: after
+      slideshow_pager_image_style: ''
+      slideshow_controls_pause: 0
+      slideshow_pause: 0
+      slideshow_start_on_hover: 0
+      slideshow_colorbox_image_style: ''
+      slideshow_colorbox_slideshow: ''
+      slideshow_colorbox_slideshow_speed: '4000'
+      slideshow_colorbox_transition: elastic
+      slideshow_colorbox_speed: '350'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: slideshow
+    region: content
+  field_support_detail:
+    weight: 114
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_support_image:
+    weight: 115
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_support_title:
+    weight: 116
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

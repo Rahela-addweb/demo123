@@ -1,0 +1,34 @@
+uuid: 2bdbae6c-5770-40c7-b760-a2ebbf314c62
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__services_block_1
+theme: addweb
+region: content
+weight: -21
+provider: null
+plugin: 'views_block:services-block_1'
+settings:
+  id: 'views_block:services-block_1'
+  label: Services
+  provider: views
+  label_display: '0'
+  views_label: Services
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /services
+    negate: false
+    context_mapping: {  }

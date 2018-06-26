@@ -1,0 +1,29 @@
+uuid: ddfc2304-0ba1-4c6d-b7ca-0008a059e911
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b419f395-7848-4082-8bd3-994b7394e378'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: getintouch
+theme: addweb
+region: footer
+weight: -24
+provider: null
+plugin: 'block_content:b419f395-7848-4082-8bd3-994b7394e378'
+settings:
+  id: 'block_content:b419f395-7848-4082-8bd3-994b7394e378'
+  label: 'Get In Touch'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

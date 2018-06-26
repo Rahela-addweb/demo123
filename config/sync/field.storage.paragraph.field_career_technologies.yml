@@ -1,0 +1,19 @@
+uuid: af94cf91-209c-44a3-b382-139a0ebf7aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+    - paragraphs
+id: paragraph.field_career_technologies
+field_name: field_career_technologies
+entity_type: paragraph
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

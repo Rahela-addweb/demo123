@@ -1,0 +1,22 @@
+uuid: d084fb8f-1199-4c50-b5e8-08d66839fe27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drupal_is_our_life
+    - node.type.page
+  module:
+    - text
+id: node.page.field_drupal_is_our_life
+field_name: field_drupal_is_our_life
+entity_type: node
+bundle: page
+label: 'Drupal Is Our Life'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

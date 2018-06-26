@@ -1,0 +1,22 @@
+uuid: fa3ab9b1-128e-4d7e-b4a7-ba89beda51df
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - addweb
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: addweb_powered
+theme: addweb
+region: footer
+weight: -22
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

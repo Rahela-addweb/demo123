@@ -1,0 +1,25 @@
+uuid: cdbe52f3-90a2-4eba-a3f2-00bff029644f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: solution_pages
+label: 'Solution pages'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      solution: solution
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

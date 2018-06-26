@@ -1,0 +1,43 @@
+uuid: ca0c111c-5e56-4903-8efb-4549fa577ee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_header_info.field_number_about_us
+    - field.field.paragraph.about_us_header_info.field_title_about_us_header
+    - field.field.paragraph.about_us_header_info.field_title_sub_text_about_us
+    - paragraphs.paragraphs_type.about_us_header_info
+  module:
+    - text
+id: paragraph.about_us_header_info.default
+targetEntityType: paragraph
+bundle: about_us_header_info
+mode: default
+content:
+  field_number_about_us:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_title_about_us_header:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title_sub_text_about_us:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

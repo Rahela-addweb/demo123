@@ -1,0 +1,67 @@
+uuid: 6a8ae50f-77b6-485f-bf75-da0a5676f386
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_values
+    - node.type.services
+    - paragraphs.paragraphs_type.service_values
+  module:
+    - entity_reference_revisions
+id: node.services.field_service_values
+field_name: field_service_values
+entity_type: node
+bundle: services
+label: 'Service values'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      service_values: service_values
+    target_bundles_drag_drop:
+      about_us_certification_and_membe:
+        weight: 14
+        enabled: false
+      about_us_header_info:
+        weight: 15
+        enabled: false
+      awards_and_achievements_banner:
+        weight: 16
+        enabled: false
+      careers:
+        weight: 17
+        enabled: false
+      code:
+        weight: 18
+        enabled: false
+      description:
+        weight: 19
+        enabled: false
+      images:
+        weight: 20
+        enabled: false
+      product_feature:
+        weight: 21
+        enabled: false
+      product_join_us_block:
+        weight: 22
+        enabled: false
+      service_banner:
+        weight: 23
+        enabled: false
+      service_values:
+        enabled: true
+        weight: 24
+      services:
+        weight: 25
+        enabled: false
+      solution:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

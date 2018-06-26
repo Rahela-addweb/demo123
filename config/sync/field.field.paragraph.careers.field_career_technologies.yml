@@ -1,0 +1,22 @@
+uuid: 63bf69d9-bbb5-4e62-a8a1-4d32bbe6a5ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_career_technologies
+    - paragraphs.paragraphs_type.careers
+  module:
+    - field_collection
+id: paragraph.careers.field_career_technologies
+field_name: field_career_technologies
+entity_type: paragraph
+bundle: careers
+label: 'Career Technologies'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

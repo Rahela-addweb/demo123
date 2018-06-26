@@ -1,0 +1,71 @@
+uuid: 9bf02739-03a1-4659-b813-bfe59395e6f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services.field_body_services
+    - field.field.paragraph.services.field_image_services
+    - field.field.paragraph.services.field_service_icon_title
+    - field.field.paragraph.services.field_service_seo_title
+    - field.field.paragraph.services.field_service_tags
+    - field.field.paragraph.services.field_web_design_service
+    - paragraphs.paragraphs_type.services
+  module:
+    - image
+    - text
+id: paragraph.services.default
+targetEntityType: paragraph
+bundle: services
+mode: default
+content:
+  field_body_services:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_services:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_service_icon_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_service_seo_title:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_service_tags:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_web_design_service:
+    weight: 4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

@@ -1,0 +1,12 @@
+uuid: dfbc46c0-f0ee-4640-a65e-eb948f90f9cb
+langcode: en
+status: true
+dependencies: {  }
+label: 'Blog Home Left Image'
+id: blog_home_left_image
+description: ''
+aspect_ratio: '660:492'
+soft_limit_width: 660
+soft_limit_height: 492
+hard_limit_width: 660
+hard_limit_height: 492

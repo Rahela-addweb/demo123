@@ -1,0 +1,99 @@
+uuid: 85da52e4-46ea-42cf-8a6f-9ff635b09ec5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blogs.body
+    - field.field.node.blogs.field_blog_comment
+    - field.field.node.blogs.field_blog_description
+    - field.field.node.blogs.field_blog_image
+    - field.field.node.blogs.field_blog_industry
+    - field.field.node.blogs.field_seo_tags
+    - field.field.node.blogs.field_technology
+    - image.style.blog_detail_page
+    - node.type.blogs
+  module:
+    - disqus
+    - entity_reference_revisions
+    - field_formatter_class
+    - image
+    - text
+    - user
+id: node.blogs.default
+targetEntityType: node
+bundle: blogs
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_blog_comment:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: disqus_comment
+    region: content
+  field_blog_description:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_blog_image:
+    type: image
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      image_style: blog_detail_page
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_blog_industry:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_seo_tags:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_label
+    region: content
+  field_technology:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: f3700f1c-73f7-4e32-97b9-c97c7184e56d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonials_meta_tags
+    - node.type.testimonials
+  module:
+    - metatag
+id: node.testimonials.field_testimonials_meta_tags
+field_name: field_testimonials_meta_tags
+entity_type: node
+bundle: testimonials
+label: 'Testimonials Meta Tags'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

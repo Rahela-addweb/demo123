@@ -1,0 +1,35 @@
+uuid: 7e3a2f86-cffe-4b54-abaa-c7bc97e55360
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b2966d53-73dd-4230-82a6-481fd0c8cc65'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: hire-do
+id: doyouknow
+theme: addweb
+region: content_bottom
+weight: -27
+provider: null
+plugin: 'block_content:b2966d53-73dd-4230-82a6-481fd0c8cc65'
+settings:
+  id: 'block_content:b2966d53-73dd-4230-82a6-481fd0c8cc65'
+  label: 'Do you know?'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /hire-developer
+    negate: false
+    context_mapping: {  }

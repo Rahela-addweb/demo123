@@ -1,0 +1,32 @@
+uuid: 1c8f8cf5-7582-42ee-9de8-1e6787a54996
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+    - webform
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: webform
+theme: addweb
+region: content
+weight: -26
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Contact Form'
+  provider: webform
+  label_display: '0'
+  webform_id: contact
+  default_data: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

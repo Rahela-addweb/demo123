@@ -1,0 +1,22 @@
+uuid: 0b9d7f93-fba9-4e30-b352-5d150b6a3422
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creation_and_membership
+    - node.type.page
+  module:
+    - text
+id: node.page.field_creation_and_membership
+field_name: field_creation_and_membership
+entity_type: node
+bundle: page
+label: 'Creation And Membership'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

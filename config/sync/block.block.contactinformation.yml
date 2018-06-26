@@ -1,0 +1,35 @@
+uuid: b41c2ec6-1f70-4184-93ad-89d86ff4c96e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8231dfc9-f101-4df1-b9db-3d9136c0fd3c'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: contact-info
+id: contactinformation
+theme: addweb
+region: content
+weight: -24
+provider: null
+plugin: 'block_content:8231dfc9-f101-4df1-b9db-3d9136c0fd3c'
+settings:
+  id: 'block_content:8231dfc9-f101-4df1-b9db-3d9136c0fd3c'
+  label: 'Contact Information'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 69bd7928-e437-4f5a-85b0-610a9d8307c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: hire_developer_list
+label: 'Hire Developer List'
+effects:
+  3f0078c0-51f7-4e48-8f87-8d0c7515ec59:
+    uuid: 3f0078c0-51f7-4e48-8f87-8d0c7515ec59
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: hire_developer_list
+  c9c8851f-4788-4119-a72d-2a9d7286b166:
+    uuid: c9c8851f-4788-4119-a72d-2a9d7286b166
+    id: image_scale
+    weight: 2
+    data:
+      width: 80
+      height: 80
+      upscale: false

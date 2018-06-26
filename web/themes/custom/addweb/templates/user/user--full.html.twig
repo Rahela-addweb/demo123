@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>  
+	<div class="user-wrap">
+	  	<div class="user-left-wrap">
+	    	<div class="user-img">{{ content.user_picture }}</div>  
+	  	</div>
+		<div class="employee-right-wrap">
+			<div class="field-user-fun-fact">      
+				<div class="field-item">
+					{{ content.field_user_skills }}
+				</div>      
+			</div>
+			<div class="field-user-fun-fact">      
+				<div class="field-item">{{ content.field_user_favorite_line }}</div>
+			</div>
+			<div class="field-user-fun-fact">      
+				<div class="field-item">{{ content.field_user_fun_fact }}</div>
+			</div>
+			<div class="field-user-fun-fact">
+				<div class="field-item">{{ content.field_user_when_not_working }}</div>
+			</div>
+		</div>
+	</div>
+</article>

@@ -1,0 +1,32 @@
+uuid: 0ff6344d-0e26-4c92-b3c1-a10ec6f0dcfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - simple_megamenu
+_core:
+  default_config_hash: vmbalx8vPoyu2wCBblSM_Q9WROZhSTKEIe-Y5lw9krQ
+id: simple_mega_menu.field_image
+field_name: field_image
+entity_type: simple_mega_menu
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

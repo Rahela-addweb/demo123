@@ -1,0 +1,33 @@
+uuid: b7bc749f-0e63-4d9a-8724-fc19642482fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_solution_description_class
+field_name: field_solution_description_class
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: grid-inner-wrap
+      label: '3 column'
+    -
+      value: one-col-text-container
+      label: 'one column left align'
+    -
+      value: two-col-text-container
+      label: 'two column'
+    -
+      value: one-col-para-text
+      label: 'one column center align'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: ce9d8246-895c-4db5-be62-0a4e30fed0a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_services
+    - paragraphs.paragraphs_type.services
+  module:
+    - text
+id: paragraph.services.field_body_services
+field_name: field_body_services
+entity_type: paragraph
+bundle: services
+label: 'Body Services'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

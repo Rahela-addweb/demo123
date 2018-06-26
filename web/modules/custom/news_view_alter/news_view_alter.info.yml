@@ -1,0 +1,7 @@
+name: News View Alter
+type: module
+description: 'Custom Module For News View Alter & Date archive Block'
+package: Custom
+version: '8.x-1.0'
+core: '8.x'
+project: 'custom module'

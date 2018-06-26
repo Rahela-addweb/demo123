@@ -1,0 +1,9 @@
+uuid: 3a07dbcc-87c6-4db6-885e-3ba385bebcb7
+langcode: en
+status: true
+dependencies: {  }
+name: 'SEO Tags'
+vid: seo_tags
+description: ''
+hierarchy: 0
+weight: 0

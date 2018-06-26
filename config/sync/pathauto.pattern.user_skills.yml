@@ -1,0 +1,23 @@
+uuid: 54e2ef67-b3f9-4758-984d-b3968a233aa5
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: user_skills
+label: 'User Skills'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'user-skills/[term:name]'
+selection_criteria:
+  30b4eea0-40af-4564-939b-d0bb3f64cc72:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      user_skills: user_skills
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 30b4eea0-40af-4564-939b-d0bb3f64cc72
+selection_logic: and
+weight: -5
+relationships: {  }

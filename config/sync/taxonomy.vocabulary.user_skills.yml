@@ -1,0 +1,9 @@
+uuid: b8f7450c-f733-4adf-a4d5-eafc6bb50ae5
+langcode: en
+status: true
+dependencies: {  }
+name: 'User Skills'
+vid: user_skills
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,10 @@
+uuid: 6cd0b3a5-a9c7-46c0-ae81-15dd2773d126
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.custom_view
+label: 'Custom View'
+targetEntityType: taxonomy_term
+cache: true

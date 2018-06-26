@@ -1,0 +1,10 @@
+api_key: ed1ccc1c872ed9cca64a02b08c9ea536-us18
+cron: false
+batch_limit: 100
+api_classname: Mailchimp\Mailchimp
+test_mode: false
+_core:
+  default_config_hash: x8k6uOqmSHPqpp71jYGxHF3_SAs3U-Pha3YCntQIhPU
+enable_connected: true
+connected_id: null
+connected_paths: null

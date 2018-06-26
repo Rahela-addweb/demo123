@@ -1,0 +1,7 @@
+name: Addweb Five_hundred Error Page
+type: module
+description: '500 Error page'
+package: Custom
+version: '8.x-1.0'
+core: '8.x'
+project: 'custom module'

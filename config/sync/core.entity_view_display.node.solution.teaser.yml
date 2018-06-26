@@ -1,0 +1,39 @@
+uuid: cd6d303a-35c0-46db-bed3-c5f22a0e73f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.solution.body
+    - node.type.solution
+  module:
+    - text
+    - user
+id: node.solution.teaser
+targetEntityType: node
+bundle: solution
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  field_image_solution: true
+  field_solution_description: true
+  field_solution_description_class: true
+  field_solution_graphs_image: true
+  field_solution_metatag: true
+  field_solution_seo_description: true
+  field_solution_seo_title: true
+  field_solution_tags: true

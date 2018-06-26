@@ -1,0 +1,21 @@
+uuid: d3395429-20b7-4ac8-b1c7-22b658fc8995
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_join_us_detail
+    - paragraphs.paragraphs_type.product_join_us_block
+  module:
+    - text
+id: paragraph.product_join_us_block.field_join_us_detail
+field_name: field_join_us_detail
+entity_type: paragraph
+bundle: product_join_us_block
+label: 'Join Us Detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

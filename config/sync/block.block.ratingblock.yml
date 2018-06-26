@@ -1,0 +1,30 @@
+uuid: 444830b1-ba72-43cb-9561-e118a0b70181
+langcode: en
+status: true
+dependencies:
+  module:
+    - addweb_rating
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: ratingblock
+theme: addweb
+region: footer
+weight: 0
+provider: null
+plugin: rating_block
+settings:
+  id: rating_block
+  label: 'Rating block'
+  provider: addweb_rating
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/news/*\r\n/blogs\r\n/blog/*\r\n/services\r\n/hire-developer\r\n/hire-developer/*\r\n/solutions"
+    negate: false
+    context_mapping: {  }

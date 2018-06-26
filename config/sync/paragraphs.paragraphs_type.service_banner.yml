@@ -1,0 +1,9 @@
+uuid: ca11d46a-9c7c-42e7-938e-3ac90d74544f
+langcode: en
+status: true
+dependencies: {  }
+id: service_banner
+label: 'Service banner'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

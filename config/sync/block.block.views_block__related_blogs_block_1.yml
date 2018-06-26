@@ -1,0 +1,35 @@
+uuid: 0a06aa57-70f6-4b28-8dd5-ca3ff5c28d40
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_blogs
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: related-blogs-block
+id: views_block__related_blogs_block_1
+theme: addweb
+region: content
+weight: -19
+provider: null
+plugin: 'views_block:related_blogs-block_1'
+settings:
+  id: 'views_block:related_blogs-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/blogs/*\r\n"
+    negate: false
+    context_mapping: {  }

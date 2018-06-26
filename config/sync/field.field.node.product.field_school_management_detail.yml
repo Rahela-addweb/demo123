@@ -1,0 +1,21 @@
+uuid: 2d78d1e1-65d6-409e-ae0e-9b6bf58b17c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_management_detail
+    - node.type.product
+  module:
+    - text
+id: node.product.field_school_management_detail
+field_name: field_school_management_detail
+entity_type: node
+bundle: product
+label: 'School Management Detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

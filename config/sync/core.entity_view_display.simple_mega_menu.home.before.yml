@@ -1,0 +1,25 @@
+uuid: 53ea8be3-4f25-4a80-8dff-6d9095f7b6c5
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.simple_mega_menu.before
+    - field.field.simple_mega_menu.home.field_body
+    - simple_megamenu.simple_mega_menu_type.home
+  module:
+    - text
+id: simple_mega_menu.home.before
+targetEntityType: simple_mega_menu
+bundle: home
+mode: before
+content:
+  field_body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  name: true
+  user_id: true

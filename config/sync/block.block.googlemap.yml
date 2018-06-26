@@ -1,0 +1,35 @@
+uuid: 9db6667a-2740-41ab-b0d2-643c9100f882
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:af266e7c-8118-44a2-ac13-eda568d29791'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: googlemap
+theme: addweb
+region: content_bottom
+weight: -24
+provider: null
+plugin: 'block_content:af266e7c-8118-44a2-ac13-eda568d29791'
+settings:
+  id: 'block_content:af266e7c-8118-44a2-ac13-eda568d29791'
+  label: 'Google Map'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

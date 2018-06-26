@@ -1,0 +1,28 @@
+uuid: cf832698-3114-44f7-8e32-5c6ca504d6f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-menu
+  module:
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: 'text-right top-menu-list'
+id: topmenu
+theme: addweb
+region: top_header
+weight: -24
+provider: null
+plugin: 'system_menu_block:top-menu'
+settings:
+  id: 'system_menu_block:top-menu'
+  label: 'Top menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

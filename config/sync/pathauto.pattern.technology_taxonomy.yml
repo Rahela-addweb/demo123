@@ -1,0 +1,23 @@
+uuid: cbf0b522-9b7e-401b-85d4-31d0ba0f4ef1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: technology_taxonomy
+label: 'Technology Taxonomy'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'technology-detail/[term:name]'
+selection_criteria:
+  6fa5a220-f337-425c-b159-13eb89ab5e83:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      technology: technology
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 6fa5a220-f337-425c-b159-13eb89ab5e83
+selection_logic: and
+weight: -5
+relationships: {  }

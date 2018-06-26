@@ -1,0 +1,35 @@
+uuid: 32872c7a-56de-48c3-a207-72f7ee10733a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:df0d9a50-96f5-4211-b0a4-589f130e16b9'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: hire-developer-header
+id: addwebsolutionservices
+theme: addweb
+region: header
+weight: -15
+provider: null
+plugin: 'block_content:df0d9a50-96f5-4211-b0a4-589f130e16b9'
+settings:
+  id: 'block_content:df0d9a50-96f5-4211-b0a4-589f130e16b9'
+  label: 'Addweb Solution Services'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /hire-developer
+    negate: false
+    context_mapping: {  }

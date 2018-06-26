@@ -1,0 +1,28 @@
+uuid: bd6e18a4-e6fb-496b-be2a-ca63c31a89ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-right
+  module:
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: 'main-menu main-menu-right'
+id: mainnavigationright
+theme: addweb
+region: navigation
+weight: -13
+provider: null
+plugin: 'system_menu_block:main-navigation-right'
+settings:
+  id: 'system_menu_block:main-navigation-right'
+  label: 'Main Navigation Right'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

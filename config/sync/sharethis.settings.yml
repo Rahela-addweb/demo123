@@ -1,0 +1,103 @@
+button_option: stbc_large
+comments: 0
+late_load: 0
+location: content
+node_types:
+  blogs: blogs
+  news: news
+  article: null
+  page: null
+  portfolio: null
+  simplenews_issue: null
+  testimonials: null
+option_extras:
+  'Google Plus One:plusone': '0'
+  'Facebook Like:fblike': '0'
+option_neworzero: 0
+option_onhover: 1
+option_shorten: 1
+service_option: '''Facebook:facebook'',''Twitter:twitter'',''Google +:googleplus'''
+twitter_handle: ''
+twitter_recommends: ''
+twitter_suffix: ''
+webform_options: ''
+weight: 10
+widget_option: st_multi
+cns:
+  donotcopy: null
+  hashaddress: null
+sharethisnodes:
+  article:
+    full: full
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  page:
+    full: full
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  blogs:
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  portfolio:
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  testimonials:
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  simplenews_issue:
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  news:
+    email_html: '0'
+    email_plain: '0'
+    email_textalt: '0'
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+_core:
+  default_config_hash: OUePCWmQ_tUOCD4VF7-AP0maPJi2Y18f0JvNTgThhRQ
+publisherID: dr-7651f08-b3c7-b699-fd8b-478c5f2fca27
+callesi: '0'

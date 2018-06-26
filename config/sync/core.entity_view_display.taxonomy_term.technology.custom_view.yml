@@ -1,0 +1,42 @@
+uuid: 40cbe392-3e41-4fe1-8aff-8e59fe237673
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.custom_view
+    - field.field.taxonomy_term.technology.field_default_blogs
+    - field.field.taxonomy_term.technology.field_default_portfolio
+    - field.field.taxonomy_term.technology.field_hire_developer_metatag
+    - field.field.taxonomy_term.technology.field_hire_seo_description
+    - field.field.taxonomy_term.technology.field_hire_seo_title
+    - field.field.taxonomy_term.technology.field_technolgy_metatag
+    - field.field.taxonomy_term.technology.field_technology_image
+    - taxonomy.vocabulary.technology
+  module:
+    - image
+id: taxonomy_term.technology.custom_view
+targetEntityType: taxonomy_term
+bundle: technology
+mode: custom_view
+content:
+  field_technology_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true
+  field_default_blogs: true
+  field_default_portfolio: true
+  field_hire_developer_metatag: true
+  field_hire_seo_description: true
+  field_hire_seo_title: true
+  field_hours_of_experience: true
+  field_team_size_of_technology: true
+  field_technolgy_metatag: true
+  field_total_project_delivered: true
+  field_total_ticket_served: true

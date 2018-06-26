@@ -1,0 +1,22 @@
+uuid: 3f824c24-ee29-4ea0-9360-0242908ed9e6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - addweb
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: addweb_local_tasks
+theme: addweb
+region: header
+weight: -18
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

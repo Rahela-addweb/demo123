@@ -1,0 +1,19 @@
+uuid: c6e1a767-9c99-411a-88af-a6c4c40ce837
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_business_with_addweb_solut
+field_name: field_business_with_addweb_solut
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

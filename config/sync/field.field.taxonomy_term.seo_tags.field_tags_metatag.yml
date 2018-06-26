@@ -1,0 +1,23 @@
+uuid: f19c08a5-7ea9-404d-ba54-5e848a52a108
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tags_metatag
+    - taxonomy.vocabulary.seo_tags
+  module:
+    - metatag
+id: taxonomy_term.seo_tags.field_tags_metatag
+field_name: field_tags_metatag
+entity_type: taxonomy_term
+bundle: seo_tags
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

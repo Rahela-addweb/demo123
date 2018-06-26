@@ -1,0 +1,39 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Design of Typography.
+ */
+
+.page-main-title {
+  display: inline-block;
+  width: 100%;
+  margin: 50px 0 45px;
+  padding-bottom: 0;
+  border-bottom: none;
+  color: $black-31;
+  font-size: 45px;
+  font-family: $opensans-regular;
+  text-align: center;
+  /*text-transform: none;*/
+  text-transform: capitalize;
+  /*opacity: .9;*/
+  @media (max-width: 992px) {
+    margin: 40px 0 35px;
+    font-size: 40px;
+  }
+  @media (max-width: 992px) {
+    margin: 30px 0 25px;
+    font-size: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 34px;
+  }
+}
+
+/*body.hire-developer-detail {
+  h1.page-main-title:first-child {
+    display: none;
+  }
+
+}*/

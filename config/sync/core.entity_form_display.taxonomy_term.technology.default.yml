@@ -1,0 +1,138 @@
+uuid: 38eced0e-f70b-4ce8-8249-8a024b234667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technology.field_default_blogs
+    - field.field.taxonomy_term.technology.field_default_portfolio
+    - field.field.taxonomy_term.technology.field_hire_developer_metatag
+    - field.field.taxonomy_term.technology.field_hire_seo_description
+    - field.field.taxonomy_term.technology.field_hire_seo_title
+    - field.field.taxonomy_term.technology.field_hours_of_experience
+    - field.field.taxonomy_term.technology.field_team_size_of_technology
+    - field.field.taxonomy_term.technology.field_technolgy_metatag
+    - field.field.taxonomy_term.technology.field_technology_image
+    - field.field.taxonomy_term.technology.field_total_project_delivered
+    - field.field.taxonomy_term.technology.field_total_ticket_served
+    - image.style.thumbnail
+    - taxonomy.vocabulary.technology
+  module:
+    - image
+    - metatag
+    - path
+    - text
+id: taxonomy_term.technology.default
+targetEntityType: taxonomy_term
+bundle: technology
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_default_blogs:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_default_portfolio:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_hire_developer_metatag:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_hire_seo_description:
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_hire_seo_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hours_of_experience:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_team_size_of_technology:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_technolgy_metatag:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_technology_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_total_project_delivered:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_total_ticket_served:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

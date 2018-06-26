@@ -1,0 +1,36 @@
+uuid: 53d8f257-1684-4c15-ba9f-977ef88c09eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_class_for_image
+field_name: field_class_for_image
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: interior-inner-wrap-width3
+      label: 'Image 3'
+    -
+      value: interior-inner-wrap-width4
+      label: 'Image 4'
+    -
+      value: interior-inner-wrap-width5
+      label: 'Image 5'
+    -
+      value: interior-inner-wrap-width6
+      label: 'Image 6'
+    -
+      value: interior-inner-wrap-width7
+      label: 'Image 7'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

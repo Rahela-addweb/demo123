@@ -1,0 +1,42 @@
+uuid: 24e4b858-ae77-490d-a214-81660c2596b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.product_join_us_block.field_join_us_detail
+    - field.field.paragraph.product_join_us_block.field_join_us_icon
+    - field.field.paragraph.product_join_us_block.field_join_us_title
+    - paragraphs.paragraphs_type.product_join_us_block
+  module:
+    - image
+    - text
+id: paragraph.product_join_us_block.default
+targetEntityType: paragraph
+bundle: product_join_us_block
+mode: default
+content:
+  field_join_us_detail:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_join_us_icon:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_join_us_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

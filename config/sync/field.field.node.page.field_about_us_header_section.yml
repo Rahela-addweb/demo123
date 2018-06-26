@@ -1,0 +1,46 @@
+uuid: 882a3c15-b58d-4cc2-8fbe-0ea15120c225
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_us_header_section
+    - node.type.page
+    - paragraphs.paragraphs_type.about_us_header_info
+  module:
+    - entity_reference_revisions
+id: node.page.field_about_us_header_section
+field_name: field_about_us_header_section
+entity_type: node
+bundle: page
+label: 'About Us Header Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      about_us_header_info: about_us_header_info
+    target_bundles_drag_drop:
+      about_us_header_info:
+        enabled: true
+        weight: 7
+      careers:
+        weight: 8
+        enabled: false
+      code:
+        weight: 9
+        enabled: false
+      description:
+        weight: 10
+        enabled: false
+      images:
+        weight: 11
+        enabled: false
+      services:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

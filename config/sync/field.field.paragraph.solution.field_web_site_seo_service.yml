@@ -1,0 +1,23 @@
+uuid: 2d738f07-808e-4226-806a-6f34dfedb077
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_web_site_seo_service
+    - paragraphs.paragraphs_type.solution
+id: paragraph.solution.field_web_site_seo_service
+field_name: field_web_site_seo_service
+entity_type: paragraph
+bundle: solution
+label: 'Web Site SEO Service'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

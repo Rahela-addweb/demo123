@@ -1,0 +1,28 @@
+uuid: c059b19e-0c3e-45df-b88c-42dc63b53e47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portfolio_industry
+    - node.type.portfolio
+    - taxonomy.vocabulary.industry
+id: node.portfolio.field_portfolio_industry
+field_name: field_portfolio_industry
+entity_type: node
+bundle: portfolio
+label: 'Portfolio Industry'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      industry: industry
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

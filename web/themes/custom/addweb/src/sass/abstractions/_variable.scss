@@ -1,0 +1,156 @@
+/**
+ * @file
+ * SCSS file for variables.
+ *
+ * All variables used in SCSS are defined in this file.
+ */
+
+
+/**
+ * Font face
+ */
+/*$gotham-bold: 'Gotham Bold';
+$gotham-light: 'Gotham Light';
+$gotham-medium: 'Gotham Medium';
+
+$segoeui-regular: 'OpenSans Regular';
+$segoeui-semibold: 'OpenSans SemiBold';
+
+$titillium-bold: 'Titillium Bold';*/
+
+$opensans-extrabold: 'OpenSans Extrabold';
+$opensans-bold: 'OpenSans Bold';
+$opensans-semibold: 'OpenSans SemiBold';
+$opensans-bolditalic: 'OpenSans BoldItalic';
+$opensans-italic: 'OpenSans Italic';
+$opensans-regular: 'OpenSans Regular';
+$opensans-light: 'OpenSans light';
+$opensans-semibolditalic: 'OpenSans semibolditalic';
+
+/*$lato-regular: 'OpenSans Regular';
+$lato-semibold: 'OpenSans SemiBold';
+
+$sourcesanspro-semibold: 'SourceSansPro Semibold';
+
+$avenirltstd-light: 'Avenirltstd Light';
+$avenirltstd-black: 'Avenirltstd Black';
+$avenirltstd-heavy: 'Avenirltstd Heavy';
+$avenirltstd-heavyoblique: 'Avenirltstd heavyoblique';*/
+
+/* URLs */
+/*$url-gotham-bold: url('../fonts/GOTHAM-BOLD.OTF');
+$url-gotham-light: url('../fonts/GOTHAM-LIGHT.TTF');
+$url-gotham-medium: url('../fonts/GOTHAM-MEDIUM.TTF');*/
+
+
+/*$url-segoeui-regular: url('../fonts/Segoeuib/segoeui_regular.ttf'), url('../fonts/Segoeuib/SegoeUI.woff') format('woff');
+$url-segoeui-semibold: url('../fonts/Segoeuib/segoeuib_semibold.ttf'), url('../fonts/Segoeuib/SegoeUI-semiBold.woff') format('woff');*/
+
+$url-titillium-bold: url('../fonts/TitilliumWeb-Bold.ttf'), url('../fonts/TitilliumWeb-Bold.woff') format('woff');
+
+$url-opensans-extrabold: url('../fonts/OpenSans/OpenSans-ExtraBold.woff');
+$url-opensans-bold: url('../fonts/OpenSans/OpenSans-Bold.woff');
+$url-opensans-semibold: url('../fonts/OpenSans/OpenSans-Semibold.woff');
+$url-opensans-bolditalic: url('../fonts/OpenSans/OpenSans-BoldItalic.woff');
+$url-opensans-italic: url('../fonts/OpenSans/OpenSans-Italic.woff');
+$url-opensans-regular: url('../fonts/OpenSans/OpenSans-Regular.woff');
+$url-opensans-light: url('../fonts/OpenSans/OpenSans-Light.woff');
+$url-opensans-semibolditalic: url('../fonts/OpenSans/OpenSans-SemiboldItalic.woff');
+
+/*$url-lato-regular: url('../fonts/Lato-Regular.woff');
+$url-lato-semibold: url('../fonts/Lato-Semibold.woff');*/
+
+/*$url-sourcesanspro-semibold: url('../fonts/SourceSansPro-Semibold.woff');
+$url-avenirltstd-light: url('../fonts/Avenir/AvenirLTStd-Light.otf'), url('../fonts/Avenir/AvenirLTStd-Light.woff') format('woff');
+$url-avenirltstd-black: url('../fonts/Avenir/AvenirLTStd-Black.woff');
+$url-avenirltstd-heavy: url('../fonts/Avenir/AvenirLTStd-Heavy.otf'), url('../fonts/Avenir/AvenirLTStd-Heavy.woff') format('woff');
+$url-avenirltstd-heavyoblique: url('../fonts/Avenir/AvenirLTStd-HeavyOblique.otf'), url('../fonts/Avenir/AvenirLTStd-HeavyOblique.woff') format('woff');*/
+
+$contact-icon: url('../images/contact-icons.png');
+$header-social-icon: url('../images/socialicons.svg');
+$contact-social-icon: url('../images/contact-social-icons.png');
+/*$header-social-icon1: url('../images/social-icon1.png');*/
+$facebook: url('../images/facebook.png');
+$facebook-hover: url('../images/facebook-hover.png');
+$googleplus: url('../images/googleplus.png');
+$googleplus-hover: url('../images/googleplus-hover.png');
+$linkedin: url('../images/linkedin.png');
+$linkedin-hover: url('../images/linkedin-hover.png');
+$twitter: url('../images/twitter.png');
+$twitter-hover: url('../images/twitter-hover.png');
+$stackoverflow: url('../images/stackoverflow.png');
+$stackoverflow-hover: url('../images/stackoverflow-hover.png');
+
+
+/* Color code */
+$white:      #FFF;
+$white-cb:   #CBE3EE;
+$white-e5:   #E5E5E5;
+$white-f2:   #F2F2F2;
+$white-f5:   #F5F5F5;
+$black:      #000;
+$black-11:   #111;    // 7% dull
+$black-22:   #222;    // 13 dull
+$black-65:   #656565; // 40 dull
+$black-bd:   #BDBDBD; // 74 dull
+$black-c8:   #C8C8C8; // 78 dull
+$black-de:   #DEDEDE; // 87 dull
+$black-1e:   #1E2C2A;
+$black-31:   #313131;
+$black-34:   #343434;
+$black-35:   #353535;
+$black-3f:   #3F3F3F;
+$black-55:   #555;
+$black-66:   #666;
+$black-44:   #444;
+$black-30:   #30393E;
+$black-dd:   #DDD;
+$black-59:   #594532;
+$grey-cc:    #CCC;
+$grey-33:    #333;
+$gray-95:    #959595;
+$gray-ea:    #EAEAEA;
+$gray-47:    #474747;
+$gray-4a:    #4A4A4A;
+$gray-9e:    #9E9E9E;
+$gray-ef:    #EFEFEF;
+$gray-fc:    #FCFCFC;
+$gray-6c:    #6C6C6C;
+$gray-b8:    #B8B8B8;
+$gray-c6:    #C6C6C6;
+$gray-d8:    #D8D8D8;
+$blue-00:    #0055A8;
+$blue-0b:    #0B78BD;
+$blue-007:   #0075BB;
+$blue-22:    #22497B;
+$blue-009:   #0098C4;
+$sky-blue:   #47A0E2;
+$blue-00:    #0067B1;
+$blue-47:    #476CB9;
+$blue-08:    #085C82;
+$blue-083:   #08375F;
+$blue-42:    #4286F5;
+$blue-46:    #46A8F1;
+$blue-15:    #155C86;
+$sky-e1:     #E1ECFE;
+$sky8f:      #8FE3E5;
+$sky-ef:     #EFF6FC;
+$light-blue: #0087B0;
+$mid-blue:   #006893;
+$dark-blue:  #00457B;
+$purple:     #4D309E;
+$green:      #006B59;
+$green-df:   #DFF0D8;
+$green-5f:   #5F763D;
+$dark-green: #34A853;
+$orange-ef:  #EFA25B;
+$red:        #F63025;
+$red-a9:     #A94442;
+$red-ea:     #EA4237;
+$red-f2:     #F2DEDE;
+$orange-f4:  #F4A460;
+$green-50:   #50C78E;
+$yellow-c6:  #C6C750;
+$yellow-fa:  #FABC05;
+
+

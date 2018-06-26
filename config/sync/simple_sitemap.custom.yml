@@ -1,0 +1,45 @@
+links:
+  -
+    path: /
+    priority: '1.0'
+  -
+    path: /customer-testimonials
+    priority: '0.8'
+  -
+    path: /our-team
+    priority: '0.8'
+  -
+    path: /team-testimonials
+    priority: '0.8'
+  -
+    path: /portfolio
+    priority: '0.8'
+  -
+    path: /contact
+    priority: '0.8'
+  -
+    path: /blogs
+    priority: '0.8'
+  -
+    path: /services
+    priority: '0.8'
+  -
+    path: /solutions
+    priority: '0.8'
+  -
+    path: /hire-developer
+    priority: '0.8'
+  -
+    path: /careers
+    priority: '0.5'
+  -
+    path: '/team-testimonials?page=0'
+    priority: '0.6'
+  -
+    path: '/team-testimonials?page=1'
+    priority: '0.6'
+  -
+    path: /news
+    priority: '0.5'
+_core:
+  default_config_hash: Gp8bobHmx-DuBPQoAb8KqKZXBqnca2flPqbNerZl0xQ

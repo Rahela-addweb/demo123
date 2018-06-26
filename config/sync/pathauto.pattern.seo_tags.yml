@@ -1,0 +1,23 @@
+uuid: 027a65b2-87c8-4dbf-b275-f32bf927f64e
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: seo_tags
+label: 'SEO Tags'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'tags-detail/[term:name]'
+selection_criteria:
+  e5aa11eb-a209-45dc-9807-87831cb4d869:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      seo_tags: seo_tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: e5aa11eb-a209-45dc-9807-87831cb4d869
+selection_logic: and
+weight: -5
+relationships: {  }

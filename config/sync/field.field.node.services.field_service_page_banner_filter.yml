@@ -1,0 +1,21 @@
+uuid: e24b3547-e5d6-4b9b-82ab-c7c396a0c1f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_page_banner_filter
+    - node.type.services
+  module:
+    - options
+id: node.services.field_service_page_banner_filter
+field_name: field_service_page_banner_filter
+entity_type: node
+bundle: services
+label: 'Service Page Banner Filter'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

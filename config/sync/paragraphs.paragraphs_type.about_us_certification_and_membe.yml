@@ -1,0 +1,9 @@
+uuid: 0bcbc890-a7e3-4938-8c5c-b00a31208e73
+langcode: en
+status: true
+dependencies: {  }
+id: about_us_certification_and_membe
+label: 'About Us Certification And Membership Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

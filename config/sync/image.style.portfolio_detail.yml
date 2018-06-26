@@ -1,0 +1,14 @@
+uuid: 9dc68c5a-a160-4ef9-b5a0-5ee278f72715
+langcode: en
+status: true
+dependencies: {  }
+name: portfolio_detail
+label: 'Portfolio Detail'
+effects:
+  5a275e1d-0416-4ba5-8d8e-89599e62a558:
+    uuid: 5a275e1d-0416-4ba5-8d8e-89599e62a558
+    id: image_resize
+    weight: 1
+    data:
+      width: 620
+      height: 450

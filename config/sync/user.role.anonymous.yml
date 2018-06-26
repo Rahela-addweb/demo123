@@ -1,0 +1,36 @@
+uuid: 83c180ad-47ef-4e57-beac-aedbe7bdc0bd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site map'
+  - 'access site-wide contact form'
+  - 'access tawk_to widget'
+  - 'access user profiles'
+  - 'administer user display'
+  - 'search content'
+  - 'subscribe to newsletters'
+  - 'use text format restricted_html'
+  - 'view disqus comments'
+  - 'view paragraph content about_us_certification_and_membe'
+  - 'view paragraph content about_us_header_info'
+  - 'view paragraph content awards_and_achievements_banner'
+  - 'view paragraph content careers'
+  - 'view paragraph content code'
+  - 'view paragraph content description'
+  - 'view paragraph content images'
+  - 'view paragraph content product_feature'
+  - 'view paragraph content product_join_us_block'
+  - 'view paragraph content service_banner'
+  - 'view paragraph content service_values'
+  - 'view paragraph content services'
+  - 'view paragraph content solution'
+  - 'view published simple mega menu entities'

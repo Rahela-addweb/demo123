@@ -1,0 +1,35 @@
+uuid: 0b9dcfc7-556c-406d-9023-0eb06a3170f4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:header_banner:5cadafdb-6a78-4e60-8d24-f79489933d25'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: headerbanner
+theme: addweb
+region: banner_image
+weight: 0
+provider: null
+plugin: 'block_content:5cadafdb-6a78-4e60-8d24-f79489933d25'
+settings:
+  id: 'block_content:5cadafdb-6a78-4e60-8d24-f79489933d25'
+  label: 'Header Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

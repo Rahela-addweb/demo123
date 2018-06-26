@@ -1,0 +1,9 @@
+addweb_rating:
+ path: 'custom/addweb_rating'
+ defaults:
+  _controller: '\Drupal\addweb_rating\Controller\RatingController::ratingPage'
+  _title: 'Rate Us Data'
+ requirements:
+  _permission: 'access content'
+ options:
+  no_cache: TRUE

@@ -1,0 +1,21 @@
+uuid: e9fc1b50-b6ff-4007-9fcd-7f9ec9ec806e
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_user_when_not_working
+field_name: field_user_when_not_working
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

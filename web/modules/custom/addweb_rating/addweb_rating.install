@@ -1,0 +1,58 @@
+<?php
+/**
+* Implementation of hook_schema().
+*/
+function addweb_rating_schema() {
+$schema['addweb_rating'] = array(
+'description' => t('Stores site rating details'),
+'fields' => array(
+      'rateid' => array(
+        'description' => 'The primary identifier for a rating table.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE),
+
+      'rating' => array(
+        'description' => 'The current rating value.',
+        'type' => 'int',
+        'length' => 32,
+        'not null' => TRUE),
+
+      'ip' => array(
+        'description' => 'The ip address of rated user.',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE),
+
+      'url' => array(
+        'description' => 'The url of rated page.',
+        'type' => 'varchar',
+        'length' => 500,
+        'not null' => TRUE),
+
+      'total_client' => array(
+        'description' => 'An incremented count of client.',
+        'type' => 'int',
+        'length' => 100,
+        'not null' => TRUE),
+      
+     'created' => array(
+       'description' => 'The date and time for rated user table.',
+       'type' => 'datetime', 
+       'mysql_type' => 'DATETIME',
+       'not null' => TRUE),
+
+    ),
+    'primary key' => array('rateid'),
+    );
+
+return $schema;
+}
+
+/**
+* Implementation of hook_uninstall().
+*/
+function addweb_rating_data_uninstall() {
+    // Remove tables.
+    drupal_uninstall_schema('addweb_rating');
+}

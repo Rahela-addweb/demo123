@@ -1,0 +1,29 @@
+uuid: 247f881b-74ed-49ca-aaed-cf984267b897
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:63e9176f-0733-45c8-a3c4-371a787a619e'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: 'col-xs-8 col-sm-8 col-md-6 col-lg-6'
+id: topcontactnumber
+theme: addweb
+region: top_header
+weight: -25
+provider: null
+plugin: 'block_content:63e9176f-0733-45c8-a3c4-371a787a619e'
+settings:
+  id: 'block_content:63e9176f-0733-45c8-a3c4-371a787a619e'
+  label: 'Top Contact Number'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 024d1bb4-f12d-419c-89c0-afd393643621
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: blog_left_home_page
+label: 'Blog left home page'
+effects:
+  f6da436d-8354-4bb2-b861-a93db2c978b4:
+    uuid: f6da436d-8354-4bb2-b861-a93db2c978b4
+    id: image_resize
+    weight: -9
+    data:
+      width: 660
+      height: 492
+  4a183725-5480-4224-b1c5-6e0b6220b209:
+    uuid: 4a183725-5480-4224-b1c5-6e0b6220b209
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: blog_home_left_image

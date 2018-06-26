@@ -1,0 +1,19 @@
+uuid: 0be44abe-b8ed-42c6-8ae5-a9593c0cb6a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_creation_and_membership
+field_name: field_creation_and_membership
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

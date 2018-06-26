@@ -1,0 +1,25 @@
+uuid: 190f4b82-5263-45cd-8ed9-cd34730d2d8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: service_pages
+label: 'service pages'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

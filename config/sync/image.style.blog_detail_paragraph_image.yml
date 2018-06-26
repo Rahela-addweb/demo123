@@ -1,0 +1,14 @@
+uuid: deebfbbd-001f-4f97-90d0-be0bdac9f4bd
+langcode: en
+status: true
+dependencies: {  }
+name: blog_detail_paragraph_image
+label: 'Blog detail paragraph image'
+effects:
+  11490443-90b6-4d91-8ea0-7cf9a158e758:
+    uuid: 11490443-90b6-4d91-8ea0-7cf9a158e758
+    id: image_resize
+    weight: 1
+    data:
+      width: 550
+      height: 300

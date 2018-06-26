@@ -1,0 +1,204 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * - Awards and Achievements design
+ */
+
+/* Awards and Achievements design */
+.path-awards-and-achievements {
+  .abou-us-body {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    .field--name-body {
+      img {
+        margin-bottom: 30px;
+      }
+      h2 {
+        display: inline-block;
+        width: 100%;
+        margin: 20px 0;
+        font-size: 44px;
+        font-family: $opensans-bold;
+        text-transform: capitalize;
+        @media (max-width: 992px) {
+          font-size: 40px;
+        }
+        @media (max-width: 767px) {
+          font-size: 36px;
+        }
+        span {
+          padding-right: 10px;
+          color: $blue-0b;
+          line-height: inherit;
+        }
+      }
+    }
+  }
+  .awards-and-achievements-banner {
+    position: relative;
+    display: inline-block;
+    height: 540px;
+    width: 100%;
+    background-color: rgba(224, 237, 248, .5);
+    text-align: center;
+    @media (max-width: 992px) {
+      height: 480px;
+    }
+    @media (max-width: 767px) {
+      height: auto;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: inline-block;
+      height: 0;
+      width: 0;
+      margin-left: -120px;
+      border-top: 300px solid $white;
+      border-right: 120px solid transparent;
+      border-left: 120px solid transparent;
+      content: '';
+      @media (max-width: 992px) {
+        margin-left: -90px;
+        border-top: 250px solid $white;
+        border-right: 90px solid transparent;
+        border-left: 90px solid transparent;
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-bottom: -15px;
+      border-bottom: 1px dashed $black;
+      content: '';
+    }
+    .awards-and-achievements-inner-wrap {
+      float: left;
+      width: 50%;
+      padding: 100px 0;
+      @media (max-width: 992px) {
+        padding: 75px 0;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        padding: 50px 0;
+      }
+      .awards-and-achievements-inner-image {
+        display: inline-block;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 30px;
+        background-image: url('../images/map.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        img {
+          /*max-height: 200px;*/
+          width: auto;
+          margin: 0 auto;
+        }
+      }
+      .awards-and-achievements-inner-content {
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        /*p {
+          font-size: 13px;
+          line-height: 20px;
+        }*/
+      }
+    }
+  }
+  .field-membership-image-about-us {
+    padding: 50px 0 0;
+    .field--name-field-membership-image-about-us {
+      display: inline-block;
+      width: 100%;
+      .field--item {
+        position: relative;
+        float: left;
+        width: 25%;
+        text-align: center;
+        /*padding-bottom: 60px;*/
+        &:nth-child(4n+1) {
+          clear: left;
+          @media (max-width: 992px) {
+            clear: none;
+          }
+          @media (max-width: 767px) {
+            clear: left;
+          }
+        }
+        &:nth-child(7) {
+          @media (max-width: 767px) {
+            clear: left;
+          }
+        }
+        @media (max-width: 992px) {
+          width: 33.33%;
+        }
+        @media (max-width: 767px) {
+          width: 50%;
+        }
+        @media (max-width: 480px) {
+          width: 100%;
+        }
+        div {
+          display: inline-block;
+          height: auto;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      div {
+        /*height: 100%;*/
+        a {
+          .field--name-field-about-us-membership-image {
+            min-height: 90px;
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 0;
+            img {
+              max-height: 90px;
+              width: auto;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    .certificate-description {
+      /*position: absolute;
+      top: auto;
+      bottom: 0;
+      left: 0;*/
+      .field--item {
+        left: 0;
+        max-height: 50px;
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+body {
+  display: block;
+}
+/* End */
+

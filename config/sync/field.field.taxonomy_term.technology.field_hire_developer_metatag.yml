@@ -1,0 +1,23 @@
+uuid: 97b5badd-b8c8-44f9-86e5-2e84084e2717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_hire_developer_metatag
+    - taxonomy.vocabulary.technology
+  module:
+    - metatag
+id: taxonomy_term.technology.field_hire_developer_metatag
+field_name: field_hire_developer_metatag
+entity_type: taxonomy_term
+bundle: technology
+label: Metatag
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

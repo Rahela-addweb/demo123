@@ -1,0 +1,99 @@
+uuid: 4f71f19f-66e9-4d7f-9a6f-bba8ce6407fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careers.field_body
+    - field.field.paragraph.careers.field_career_technologies
+    - field.field.paragraph.careers.field_end_date
+    - field.field.paragraph.careers.field_job_position
+    - field.field.paragraph.careers.field_start_date
+    - field.field.paragraph.careers.field_technical_skill
+    - field.field.paragraph.careers.field_technology
+    - field.field.paragraph.careers.field_title
+    - paragraphs.paragraphs_type.careers
+  module:
+    - datetime
+    - field_collection
+    - field_formatter_class
+id: paragraph.careers.default
+targetEntityType: paragraph
+bundle: careers
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_career_technologies:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+  field_end_date:
+    weight: 6
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: datetime_default
+    region: content
+  field_job_position:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_label
+    region: content
+  field_start_date:
+    weight: 5
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: datetime_default
+    region: content
+  field_technical_skill:
+    weight: 7
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_technology:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: custom_view
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: string
+    region: content
+hidden: {  }

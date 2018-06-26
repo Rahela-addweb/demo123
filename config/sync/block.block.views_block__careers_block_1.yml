@@ -1,0 +1,34 @@
+uuid: 7c7b6cd7-893b-42d1-bf97-8b6870512af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.careers
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__careers_block_1
+theme: addweb
+region: content
+weight: -22
+provider: null
+plugin: 'views_block:careers-block_1'
+settings:
+  id: 'views_block:careers-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /careers
+    negate: false
+    context_mapping: {  }

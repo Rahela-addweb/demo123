@@ -1,0 +1,19 @@
+uuid: dacdd624-a0e5-4c0b-8f99-a36a7f396d16
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_award_achieve_decription
+field_name: field_award_achieve_decription
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

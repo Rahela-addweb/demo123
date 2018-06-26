@@ -1,0 +1,268 @@
+<?php 
+use Drupal\node\Entity;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\Core\Entity\Query\QueryInterface;
+use Drupal\Core\Entity\Query;
+use Symfony\Component\HttpFoundation;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\node\NodeInterface;
+use Drupal\node\NodeTypeInterface;
+use Drupal\simplenews\Entity\Subscriber;
+use Drupal\simplenews\SubscriberInterface;
+
+// module_load_include('module', 'mailchimp','mailchimp');
+module_load_include('module', 'simplenews','simplenews');
+
+
+/**
+ * Implementation of hook_cron().
+ */
+// function site_alter_cron() {
+//     // search for subscribed user data.
+//     $result = db_query("SELECT simplenews_subscriber__subscriptions.subscriptions_status, simplenews_subscriber.mail
+//     FROM simplenews_subscriber__subscriptions
+//     JOIN simplenews_subscriber ON simplenews_subscriber__subscriptions.entity_id = simplenews_subscriber.id WHERE simplenews_subscriber__subscriptions.subscriptions_status = 1")->fetchAll();
+
+//     foreach ($result as $product) {
+//       $user_email = $product->mail;
+//       $data = [
+//         'email'     => $user_email,
+//         'status'    => 'subscribed',
+//       ];
+//       site_alter_syncMailchimp($data);
+//      }
+// }
+
+
+/**
+ * api callback function for add new subscriber in mailchimp list.
+ */
+// function site_alter_syncMailchimp($data) {
+//   $config = \Drupal::config('mailchimp.settings');
+//   $apiKey = $config->get('api_key');
+//   $mailchimp_data = mailchimp_get_lists($list_id);
+//     foreach ($mailchimp_data as $key => $value) {
+//       $listId = $key;
+//     }
+
+//   //$listId = '431ddfdadc';
+//   //$list_Id = str_replace("'", "", $listId);
+//   if((isset($apiKey) && !empty($apiKey)) && (isset($listId) && !empty($listId))) {
+//     $memberId = md5(strtolower($data['email']));
+//     $dataCenter = substr($apiKey,strpos($apiKey,'-')+1);
+//     $url = 'https://' . $dataCenter . '.api.mailchimp.com/3.0/lists/' . $listId . '/members/' . $memberId;
+//     $json = json_encode([
+//         'email_address' => $data['email'],
+//         'status'        => $data['status'], // "subscribed","unsubscribed","cleaned","pending"
+
+//     ]);
+    
+//     $ch = curl_init($url);
+
+//     curl_setopt($ch, CURLOPT_USERPWD, 'user:' . $apiKey);
+//     curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//     curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+//     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+//     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+//     $result = curl_exec($ch);
+    
+//     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+//     curl_close($ch);
+
+//     return $httpCode;
+//   }
+// }
+
+
+/**
+ * Act after a subscriber has been deleted.
+ *
+ * @ingroup subscriber
+ */
+// function site_alter_simplenews_subscriber_delete($subscriber) {
+//    $array_data = (array) $subscriber;
+//    $subscriber_mailid = $array_data["\x00*\x00values"]["mail"]["x-default"];
+ 
+//   $mailchimp_data_unsubscribe = mailchimp_get_lists($list_id);
+//     foreach ($mailchimp_data_unsubscribe as $key => $value) {
+//       $listId = $key;
+//     }
+//   if((isset($subscriber_mailid) && !empty($subscriber_mailid)) && (isset($listId) && !empty($listId))) {
+//     mailchimp_unsubscribe($listId, $subscriber_mailid, $delete = FALSE, $goodbye = FALSE, $notify = FALSE);
+//       $config = \Drupal::config('mailchimp.settings');
+//       $result_unscribe = FALSE;
+//       $result_unscribe = mailchimp_addto_queue(
+//         'mailchimp_unsubscribe_process',
+//         array(
+//           'list_id' => $listId,
+//           'email' => $subscriber_mailid,
+//           'delete' => $delete,
+//           'goodbye' => $goodbye,
+//           'notify' => $notify,
+//         )
+//       );
+//   return $result_unscribe;
+//   }
+// }
+// Load custom_token.tokens.inc from custom_token module
+//module_load_include('inc', 'custom_token', 'custom_token .tokens');
+
+
+/*
+* Assign removed user's blog to saurabhj/ashish or admin.
+*/
+/*function site_alter_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  $entity_type = $entity->getEntityTypeId();
+  if($entity_type == 'user'){
+    $userid = $entity->id();
+    $account = \Drupal\user\Entity\User::load($userid);
+    $ustatus = $account->get('status')->value;
+    if($ustatus == 0){
+      $query = \Drupal::entityQuery('node');
+      $result = $query->condition('status', NODE_PUBLISHED)
+        ->condition('type', 'blogs')
+        ->condition('uid', $userid)
+        ->execute();
+      if(!empty($result)){
+        $u_saurabh = user_load_by_mail('saurabhdhariwal.com@gmail.com');
+        if(!empty($u_saurabh) && isset($u_saurabh->get('status')->value) && $u_saurabh->get('status')->value=1)
+        {
+          $assign_id = $u_saurabh->get('uid')->value;
+        }
+        else 
+        {
+          $u_ashish = user_load_by_mail('contact@addwebsolution.com');
+          if(!empty($u_ashish) && isset($u_ashish->get('status')->value) && $u_saurabh->get('status')->value=1)
+          {
+            $assign_id = $u_ashish->get('uid')->value;
+          }
+          else {
+            $assign_id = 1;
+          }
+        }
+        foreach($result as $key => $value){
+           $node = \Drupal\node\Entity\Node::load($value);
+           $node->set("uid",$assign_id);
+           $node->save();
+        }
+      }
+    }
+  }
+}*/
+
+
+/**
+ * Alter the data of a sitemap link before the link is saved.
+ *
+ * @param $link
+ *   An array with the data of the sitemap link.
+ */
+function site_alter_simple_sitemap_links_alter(&$link) {
+  foreach ($link as $key => &$value) { 
+     $search_keys = array('technology-detail', 'tags-detail' );
+     $replace_keys = array('technology' , 'tags');
+     $value['url'] = str_replace($search_keys , $replace_keys , $value['url']); 
+     $value['alternate_urls']['en'] = str_replace($search_keys , $replace_keys , $value['alternate_urls']['en']);   
+     
+  }  
+}
+
+function site_alter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  //exit;
+  // For show subscription mail id proper
+  if ($form_id == 'simplenews_confirm_add') {
+    $newsletter_name = $form['newsletter']['#value']->name;
+    $user_mail = $form['mail']['#value'];
+    $form['question']['#markup'] = '<p>' . t('Are you sure you want to add %user to the %newsletter mailing list?', array('%user' => $user_mail, '%newsletter' => $newsletter_name)) . "<p>\n";
+    
+  }
+
+  // For show unsubscribe page mail id proper
+  if ($form_id == 'simplenews_confirm_removal') {
+    $newsletter_name = $form['newsletter']['#value']->name;
+    $user_mail = $form['mail']['#value'];
+    $form['question']['#markup'] = '<p>' . t('Are you sure you want to add %user to the %newsletter mailing list?', array('%user' => $user_mail, '%newsletter' => $newsletter_name)) . "<p>\n";
+  }
+
+  // For add list_id field for mailChimp settings form
+  // if($form_id == 'mailchimp_admin_settings') {
+  //   //$mailChimp_Query = db_query("SELECT * FROM cache_mailchimp")->fetchAll();
+  //   // dump($mailChimp_Query);
+  //   // exit;
+
+  //   $mailchimp_data = mailchimp_get_lists($list_id);
+  //   foreach ($mailchimp_data as $key => $value) {
+  //     $mailchimp_list_id = $key;
+  //   }
+
+
+  //   $form['mailchimp_list_id'] = Array
+  //       (
+  //           '#type' => 'textfield',
+  //           '#title' => 'List Id',
+  //           '#default_value' => $mailchimp_list_id,
+  //           '#description' => 'The list Id for add all subscribed user mail-id.',
+  //       );
+  //       ///$form['mailchimp_list_id']['value'] = $mailchimp_list_id;
+  //       //$form->mailchimp_list_id->setValue(['value' => $mailchimp_list_id]);
+  // }
+  
+  // For simplenews subscribe
+  // if($form_id == 'simplenews_subscriptions_block_17b04ba7-698e-421a-9d42-8de68933bafd') {
+  //     $form['actions']['subscribe']['#submit'][] = 'site_alter_simplenews_submit';
+  // }
+  
+  // // For on webform submission subscription perform
+  // if($form_id == 'webform_submission_contact_node_2_add_form') {
+  //   foreach (array_keys($form['actions']) as $action) {
+  //     if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+  //     $form['actions'][$action]['#submit'][] = 'site_alter_contact_webform_submit';
+  //     }
+  //   }
+  // }
+}
+
+
+
+  //for simplenews after subscribe click
+ // function site_alter_simplenews_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+ // }
+
+//function for subscribe weform user
+// function site_alter_contact_webform_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+//     $weform_data = $form_state->getValues();
+//     $subscribe_email = $weform_data['subscribe_to_newsletter'];
+//     $user_email = $weform_data['email'];
+   
+//     $result_exist = db_query("SELECT simplenews_subscriber__subscriptions.subscriptions_status, simplenews_subscriber.mail FROM simplenews_subscriber__subscriptions JOIN simplenews_subscriber ON simplenews_subscriber__subscriptions.entity_id = simplenews_subscriber.id WHERE simplenews_subscriber__subscriptions.subscriptions_status = 1 AND simplenews_subscriber.mail = '$user_email'")->fetchAll();
+
+//       if(isset($subscribe_email) && $subscribe_email == 1) {
+       /** @var \Drupal\simplenews\Subscription\SubscriptionManagerInterface $subscription_manager */
+//         $subscription_manager = \Drupal::service('simplenews.subscription_manager');
+//         $newsletters = simplenews_newsletter_load_multiple($ids);
+//         $lang_code = \Drupal::currentUser()->getPreferredLangcode();
+
+//         foreach ($newsletters as $newsletter) {
+//             $news_data[] = $newsletter;
+//             $subscription_manager->subscribe($user_email, $newsletter->id(), FALSE, 'website', $lang_code);
+//              drupal_set_message(t('You "%user" have been subscribed to %newsletter.', array('%user' => $user_email, '%newsletter' => $newsletter->name)));
+//            }
+//     }
+    
+//    // else {
+//    //   drupal_set_message(t('You "%user" already subscribed to %newsletter.', array('%user' => $user_email, '%newsletter' => $newsletter->name)));
+//    // }
+// }
+

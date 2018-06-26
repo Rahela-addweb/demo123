@@ -1,0 +1,22 @@
+uuid: 5711254e-8d37-4f13-8235-a6283134d39e
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: news_list
+label: 'News List'
+effects:
+  35a0b2a5-4554-41b6-a5cb-ef65aaeaff4f:
+    uuid: 35a0b2a5-4554-41b6-a5cb-ef65aaeaff4f
+    id: image_resize
+    weight: -9
+    data:
+      width: 336
+      height: 141
+  f79cba5b-8781-406e-a253-8ea877fd74ec:
+    uuid: f79cba5b-8781-406e-a253-8ea877fd74ec
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: news_list

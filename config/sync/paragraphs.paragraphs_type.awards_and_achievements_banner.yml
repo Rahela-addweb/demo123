@@ -1,0 +1,9 @@
+uuid: 7f7b0556-00ed-41b4-8075-4a992c606fd1
+langcode: en
+status: true
+dependencies: {  }
+id: awards_and_achievements_banner
+label: 'Awards and Achievements banner'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,35 @@
+uuid: 86ee651c-af4e-432f-bc05-2c44f0ef6ec8
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.hire_developer_detail_portfolio
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__hire_developer_detail_portfolio_block_1
+theme: addweb
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:hire_developer_detail_portfolio-block_1'
+settings:
+  id: 'views_block:hire_developer_detail_portfolio-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/hire-developer/*'
+    negate: false
+    context_mapping: {  }

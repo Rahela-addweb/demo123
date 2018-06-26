@@ -1,0 +1,15 @@
+uuid: 60f5a732-b823-4c4a-8887-2a2262228002
+langcode: en
+status: true
+dependencies: {  }
+name: service_listing
+label: 'service listing'
+effects:
+  16c3888c-a77f-4d67-a791-a639950a0141:
+    uuid: 16c3888c-a77f-4d67-a791-a639950a0141
+    id: image_scale
+    weight: 1
+    data:
+      width: 510
+      height: null
+      upscale: true

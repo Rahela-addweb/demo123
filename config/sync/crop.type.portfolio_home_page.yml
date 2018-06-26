@@ -1,0 +1,12 @@
+uuid: 045972d5-5dbb-48eb-af74-7617bc46a527
+langcode: en
+status: true
+dependencies: {  }
+label: 'Portfolio home page'
+id: portfolio_home_page
+description: ''
+aspect_ratio: '360:260'
+soft_limit_width: 360
+soft_limit_height: 260
+hard_limit_width: 360
+hard_limit_height: 260

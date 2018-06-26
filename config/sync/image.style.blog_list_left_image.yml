@@ -1,0 +1,23 @@
+uuid: 7c1a8f0c-c114-44d3-9ebe-eeb1cfc199b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: blog_list_left_image
+label: 'Blog List Left Image'
+effects:
+  bd87d358-5f93-44a1-8b52-889df382984e:
+    uuid: bd87d358-5f93-44a1-8b52-889df382984e
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: blog_list_left_image
+  4178c7af-cf34-4dda-86c3-2906b4c9969b:
+    uuid: 4178c7af-cf34-4dda-86c3-2906b4c9969b
+    id: image_scale
+    weight: 3
+    data:
+      width: 700
+      height: null
+      upscale: false

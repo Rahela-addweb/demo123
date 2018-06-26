@@ -1,0 +1,28 @@
+uuid: b05f96ae-6b1e-49d7-a1ff-7f5dd0259f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_technology
+    - node.type.blogs
+    - taxonomy.vocabulary.technology
+id: node.blogs.field_technology
+field_name: field_technology
+entity_type: node
+bundle: blogs
+label: 'Blog Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

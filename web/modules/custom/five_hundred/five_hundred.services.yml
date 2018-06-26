@@ -1,0 +1,6 @@
+services:
+  five_hundred:
+    class: Drupal\five_hundred\EventSubscriber\five_hundredEventSubscriber
+    arguments: ['@request_stack']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,19 @@
+uuid: 7dfeb113-014b-4b85-bac6-9d840b513769
+langcode: en
+status: true
+dependencies:
+  module:
+    - metatag
+    - node
+id: node.field_testimonials_meta_tags
+field_name: field_testimonials_meta_tags
+entity_type: node
+type: metatag
+settings: {  }
+module: metatag
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

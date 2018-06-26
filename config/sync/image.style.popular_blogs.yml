@@ -1,0 +1,14 @@
+uuid: d5aef265-f812-40bb-936c-6a5ebc63a8f1
+langcode: en
+status: true
+dependencies: {  }
+name: popular_blogs
+label: 'Popular Blogs'
+effects:
+  6288a47e-d037-4f2f-bbef-165f1c058b07:
+    uuid: 6288a47e-d037-4f2f-bbef-165f1c058b07
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 52
+      height: 52

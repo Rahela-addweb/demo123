@@ -1,0 +1,31 @@
+uuid: b058a9c4-bed0-4b4b-ab7a-167bdc1c6cb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_default_portfolio
+    - taxonomy.vocabulary.technology
+  content:
+    - 'taxonomy_term:technology:c60e53aa-c042-4d3a-9d92-cd709137d423'
+id: taxonomy_term.technology.field_default_portfolio
+field_name: field_default_portfolio
+entity_type: taxonomy_term
+bundle: technology
+label: 'Default portfolio'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c60e53aa-c042-4d3a-9d92-cd709137d423
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,35 @@
+uuid: e1f47eb5-76a8-4bf6-a92f-2cab4ce7a131
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b5b32e4c-6768-4745-88b1-6ef4cd4d33fe'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: hire-meet-team
+id: meetourteam
+theme: addweb
+region: content_bottom
+weight: -29
+provider: null
+plugin: 'block_content:b5b32e4c-6768-4745-88b1-6ef4cd4d33fe'
+settings:
+  id: 'block_content:b5b32e4c-6768-4745-88b1-6ef4cd4d33fe'
+  label: 'Meet Our Team'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /hire-developer
+    negate: false
+    context_mapping: {  }

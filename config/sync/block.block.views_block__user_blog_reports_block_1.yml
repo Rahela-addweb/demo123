@@ -1,0 +1,35 @@
+uuid: eab794c2-9594-4e04-9b34-74a48d5aec93
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.user_blog_reports
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__user_blog_reports_block_1
+theme: addweb
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:user_blog_reports-block_1'
+settings:
+  id: 'views_block:user_blog_reports-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '10'
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,17 @@
+uuid: 644836a1-df34-41b5-9e15-2032c5510f24
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.simple_mega_menu.after
+    - field.field.simple_mega_menu.home.field_body
+    - simple_megamenu.simple_mega_menu_type.home
+id: simple_mega_menu.home.after
+targetEntityType: simple_mega_menu
+bundle: home
+mode: after
+content: {  }
+hidden:
+  field_body: true
+  name: true
+  user_id: true

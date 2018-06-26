@@ -1,0 +1,15 @@
+uuid: 8adbec97-43de-484d-bd20-fdb133d00b44
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: D0orgDTjRpyNl9BuqBcVkDj1JJx_zCPAamTbxqOijT0
+id: megamenu
+label: MegaMenu
+targetMenu:
+  main: main
+  admin: '0'
+  devel: '0'
+  footer: '0'
+  tools: '0'
+  account: '0'

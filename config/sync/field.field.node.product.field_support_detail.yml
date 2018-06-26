@@ -1,0 +1,21 @@
+uuid: 93d68280-e56e-4797-b464-b33a7cda40d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_support_detail
+    - node.type.product
+  module:
+    - text
+id: node.product.field_support_detail
+field_name: field_support_detail
+entity_type: node
+bundle: product
+label: 'Support Detail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

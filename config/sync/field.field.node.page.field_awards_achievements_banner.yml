@@ -1,0 +1,67 @@
+uuid: 64924759-9d16-4988-95cc-a92eecf625cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_awards_achievements_banner
+    - node.type.page
+    - paragraphs.paragraphs_type.awards_and_achievements_banner
+  module:
+    - entity_reference_revisions
+id: node.page.field_awards_achievements_banner
+field_name: field_awards_achievements_banner
+entity_type: node
+bundle: page
+label: 'Awards and Achievements banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      awards_and_achievements_banner: awards_and_achievements_banner
+    target_bundles_drag_drop:
+      about_us_certification_and_membe:
+        weight: 14
+        enabled: false
+      about_us_header_info:
+        weight: 15
+        enabled: false
+      awards_and_achievements_banner:
+        enabled: true
+        weight: 16
+      careers:
+        weight: 17
+        enabled: false
+      code:
+        weight: 18
+        enabled: false
+      description:
+        weight: 19
+        enabled: false
+      images:
+        weight: 20
+        enabled: false
+      mega_menu_hire_us:
+        weight: 21
+        enabled: false
+      mega_menu_links:
+        weight: 22
+        enabled: false
+      mega_menu_ribbon:
+        weight: 23
+        enabled: false
+      services:
+        weight: 24
+        enabled: false
+      service_banner:
+        weight: 25
+        enabled: false
+      solution:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

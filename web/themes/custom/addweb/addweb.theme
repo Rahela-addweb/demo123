@@ -1,0 +1,609 @@
+<?php
+/**
+ * @file
+ * addweb.theme
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\file\Entity\File;
+use Drupal\user\Entity\User;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Vocabulary;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+function addweb_preprocess_page(&$variables) {
+  
+//for redirect proper at 404
+  $status = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
+  if ($status && $status->getStatusCode() == 404){
+    $current_path = \Drupal::service('path.current')->getPath();
+    unset($current_path);
+    $path = '/404-error-page';
+    $response = new RedirectResponse($path);
+    $response->send();
+    return;
+  }
+
+  // Add library based on path
+  $request_path = \Drupal::request()->getRequestUri();
+  $request_path_stripped = explode('?', $request_path);
+  $request_path_stripped = reset($request_path_stripped);
+
+  $variables['request_path'] = $request_path_stripped;
+
+  if(isset($variables['node'])){
+  $node =  $variables['node']->getType();
+    if($node == 'page'){
+      $page_node = \Drupal::request()->attributes->get('node');
+      $home_pages = $page_node->get('field_home_page')->value;
+      if($home_pages == '1'){
+        $variables['display_type'] = "home-pages";
+      }
+    }
+  }
+
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);
+  if(!empty($path_args[1])){
+    $first_argument = $path_args[1];
+    $variables['first_argument'] = $path_args[1];
+  }
+  if(!empty($path_args[2])){
+    $second_argument = $path_args[2];
+    $variables['second_argument'] = $path_args[2];
+  }
+  
+  
+
+  _addweb_render_block_by_id('quicklinks', $variables);
+  _addweb_render_block_by_id('twitterblock', $variables);
+  _addweb_render_block_by_id('getintouch', $variables);
+  _addweb_render_block_by_id('napcode', $variables);
+  _addweb_render_block_by_id('views_block__tag_cloud_block_1', $variables);
+  _addweb_render_block_by_id('hireus', $variables);
+  _addweb_render_block_by_id('simplenewssubscription', $variables);
+  _addweb_render_block_by_id('socialmedia', $variables);
+  _addweb_render_block_by_id('views_block__related_blogs_block_1', $variables);
+  _addweb_render_block_by_id('views_block__testimonials_block_1', $variables);
+  _addweb_render_block_by_id('views_block__portfolio_block_1', $variables); 
+  _addweb_render_block_by_id('views_block__related_portfolio_block_1', $variables); 
+  // _addweb_render_block_by_id('views_block__blogs_block_3', $variables); 
+  /*_addweb_render_block_by_id('views_block__service_header_slider_block_1', $variables);*/
+  if(!empty($request_path) && ($request_path != '/contact')) {
+    _addweb_render_block_by_id('webform', $variables);
+  } 
+  //for news page class
+  if ($path_args[1] == 'news') {
+    $variables['nodetype'] = 'news';
+  }
+  if ($path_args[1] == 'contact') {
+    $variables['contact'] = 'contact';
+  }
+  if ($path_args[1] == 'product') {
+    $variables['product'] = 'product';
+  }
+  if ($path_args[1] == 'hire-developer' && !empty($path_args[2])) {
+    $variables["hire_developer_container"] = "hire-developer-container";
+    $machine_name = $path_args[2];
+    $machine_name_replace = str_replace('-', '_', $machine_name);      
+    $term_id = db_query("SELECT `tid` FROM `taxonomy_term_field_data` WHERE `machine_name`=:machine_name_replace  AND `vid`='technology'" , array(":machine_name_replace" => $machine_name_replace))->fetchField(); 
+    $variables['display_type'] = "services";   
+    if(!empty($term_id)){
+      $relatedBlogs = views_embed_view('related_blogs', 'block_1', $term_id);              
+      if(!empty(trim(strip_tags(drupal_render($relatedBlogs))))){      
+        $variables["relatedBlogs"] = $relatedBlogs;
+      }else{  
+        $term_object = taxonomy_term_load($term_id);
+        $term_default_id= $term_object->get('field_default_blogs')->target_id;       
+        $relatedBlogs = views_embed_view('related_blogs', 'block_1', $term_default_id);
+        $variables["relatedBlogs"] = $relatedBlogs;
+      }        
+      $relatedArticles1 = views_embed_view('related_portfolio', 'block_2', $term_id);
+      if(!empty(trim(strip_tags(drupal_render($relatedArticles1))))){
+        $variables["relatedPortfolioblock2"] = $relatedArticles1;
+      }else{
+        $term_object = taxonomy_term_load($term_id);
+        $term_default_id= $term_object->get('field_default_portfolio')->target_id;       
+        $relatedArticles1 = views_embed_view('related_portfolio', 'block_2', $term_default_id);
+        $variables["relatedPortfolioblock2"] = $relatedArticles1;
+      } 
+    }   
+  } 
+  
+  if(isset($variables['node'])){    
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      $variables['node_type'] = $node->bundle();
+      if($variables['node_type']== 'page'){
+        $title = $node->get('field_display_type')->getValue();
+        if(!empty($title)){
+          $variables['display_type'] = $title['0']['value'];     
+        }
+      }
+      if($variables['node_type']== 'solution'){
+        $variables['display_type'] = "services";
+      }
+      if($variables['node_type'] == 'services'){            
+        $variables['node_type'] = "services";
+      }  
+    }
+  }
+
+//for add parent div only for product page
+  if(isset($variables['node'])) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      $variables['product_type'] = $node->bundle();
+      if($variables['product_type'] == 'product') {
+        /*print('<pre style="color:red;">');
+        print_r('success');
+        print('</pre>');*/
+        //exit;
+          $variables['product_type'] == 'product';
+      }
+
+    }
+  }
+
+  if(isset($variables['node'])){    
+    if($variables['node']->getType() == 'page'){    
+      if($variables['node']->field_display_type->value == 'services'){ 
+        $nid=$variables['node']->id();      
+        $node = \Drupal\node\Entity\Node::load($nid); 
+        $paragraph = $node->field_paragraph_type->getValue();        
+        foreach ( $paragraph as $element ) {
+          $p = \Drupal\paragraphs\Entity\Paragraph::load( $element['target_id'] );                
+          if(!empty($p->field_service_tags->target_id)){ 
+            $service_tags_id = $p->field_service_tags->target_id;         
+          }  
+        }       
+        $relatedBlogs = views_embed_view('related_blogs', 'block_1', $service_tags_id);        
+        if(!empty(trim(strip_tags(drupal_render($relatedBlogs))))){    
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }else{
+          $relatedBlogs = views_embed_view('related_blogs', 'block_1', '242');
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }       
+      }
+    }
+    if($variables['node']->getType()=='solution'){   
+      $nid=$variables['node']->id();      
+      $node = \Drupal\node\Entity\Node::load($nid);
+      $variables['solutionTags'] = $node->field_solution_tags->target_id;
+      if(!empty($variables['solutionTags'])){
+        $relatedBlogs = views_embed_view('related_blogs', 'block_1', $variables['solutionTags']);
+        if(!empty(trim(strip_tags(drupal_render($relatedBlogs))))){    
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }else{
+          $relatedBlogs = views_embed_view('related_blogs', 'block_1', '242');
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }         
+      }
+      else{
+        $relatedBlogs = views_embed_view('related_blogs', 'block_1', '242');
+        $variables["relatedBlogs"] = drupal_render($relatedBlogs);
+      }    
+    } 
+    //for services bottom benner image
+    /*if($variables['node']->getType() == 'services') { 
+    $nid=$variables['node']->id();
+    $node = \Drupal\node\Entity\Node::load($nid);
+    $imageArray = $node->get('field_serices_benner_bottom_imag')->getValue();
+      foreach ($imageArray as $imageArray_key => $imageArray_value) {
+        $fid = $imageArray_value['target_id'];
+        $file = \Drupal\file\Entity\File::load($fid);
+        $path[] = $file->getFileUri();
+      }
+      foreach ($path as $key => $value) {
+        $image_url[] = file_create_url($value);
+      }
+      $variables['imagepath'] = $image_url;
+    }*/
+  } 
+}
+
+function _addweb_render_block_by_id($id, &$variables) {
+  $block = \Drupal\block\Entity\Block::load($id);
+  $variables['block_output_' . $id] = \Drupal::entityManager()
+    ->getViewBuilder('block')
+    ->view($block);
+}
+
+function addweb_preprocess(&$variables) {
+  $variables['base_path'] = base_path();
+  global $base_url;
+  $variables['base_url'] = $base_url;
+
+  _addweb_render_block_by_id('socialmedia', $variables);
+  
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);
+  $first_argument = $path_args[1];
+  $variables['first_argument'] = $path_args[1];
+
+  if(isset($path_args[2])){
+    $second_argument = $path_args[2];
+    $variables['second_argument'] = $path_args[2];
+  }
+  
+ 
+
+  $request_path = \Drupal::request()->getRequestUri();
+  $request_path_stripped = explode('?', $request_path);
+  $request_path_stripped = reset($request_path_stripped);
+
+  $variables['request_path'] = $request_path_stripped;
+}
+
+function addweb_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['paragraph'];
+  // Get the parent bundle.
+  $parentBundle = $paragraph->getParentEntity()->bundle();
+  if($parentBundle == 'solution'){
+    $paragraph = $variables['elements']['#paragraph'];
+    $web_site_seo_service = $paragraph->get('field_web_site_seo_service')->value;    
+    if($web_site_seo_service == '1'){
+      $variables['link_text'] = "link_text";     
+    } 
+  }elseif($parentBundle == 'services'){    
+    $variables['node_type'] = "services";
+  }
+}
+
+function addweb_preprocess_html(&$variables) {
+
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'hire-developer')) {
+    $variables['attributes']['class'][] = 'hire-developer-detail';
+  }
+
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && ($path_args[2] == '2')) {
+    $variables['attributes']['class'][] = 'context-contact';
+  }
+
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'portfolio')) {
+    $variables['attributes']['class'][] = 'context-portfolio';
+  }
+
+  $variables['path_info']['args'] = FALSE;
+  $path = \Drupal::request()->getPathInfo();
+  $path_args = explode('/', $path);
+  if (count($path_args) >= 1) {
+    $variables['path_info']['args'] = Html::cleanCssIdentifier(ltrim($path, '/'));
+  }
+
+  /* Set Metatag for Hire Developer Detail Page */
+
+  if (($path_args[1] == 'hire-developer' || $path_args[1] == 'technology' || $path_args[1] == 'tags') && !empty($path_args[2])) {
+    $machine_name = $path_args[2];
+    $machine_name_replace = str_replace('-', '_', $machine_name);
+    if($path_args[1] == 'hire-developer' || $path_args[1] == 'technology'){
+      $vocabulary = 'technology';
+    } else if($path_args[1] == 'tags') {
+      $vocabulary = 'seo_tags';
+    }
+    
+    $taxonomy_machine_name = taxonomy_term_machine_name_load($machine_name_replace, $vocabulary);
+
+    if($path_args[1] == 'hire-developer'){
+      $meta_tag = unserialize($taxonomy_machine_name->field_hire_developer_metatag->value);
+    } else if($path_args[1] == 'technology') {
+      $meta_tag = unserialize($taxonomy_machine_name->field_technolgy_metatag->value);
+    } else if($path_args[1] == 'tags') {
+      $meta_tag = unserialize($taxonomy_machine_name->field_tags_metatag->value);
+    }
+
+    $title = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'title',
+        'content' => $meta_tag['title'],
+      ],
+    ];
+    $description = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'description',
+        'content' => $meta_tag['description'],
+      ],
+    ];
+    $og_title = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'og:title',
+        'content' => $meta_tag['og_title'],
+      ],
+    ];
+    $og_image_url = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'og:image:url',
+        'content' => $meta_tag['og_image_url'],
+      ],
+    ];
+    $og_description = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'og:description',
+        'content' => $meta_tag['og_description'],
+      ],
+    ];
+    $twitter_cards_title = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'twitter:title',
+        'content' => $meta_tag['twitter_cards_title'],
+      ],
+    ];
+    $twitter_cards_image = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'twitter:image',
+        'content' => $meta_tag['twitter_cards_image'],
+      ],
+    ];
+    $twitter_cards_description = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'twitter:description',
+        'content' => $meta_tag['twitter_cards_description'],
+      ],
+    ];
+    $variables['page']['#attached']['html_head'][] = [$title, 'title'];
+    $variables['page']['#attached']['html_head'][] = [$description, 'description'];
+    $variables['page']['#attached']['html_head'][] = [$og_title, 'og_title'];
+    $variables['page']['#attached']['html_head'][] = [$og_description, 'og_description'];
+    $variables['page']['#attached']['html_head'][] = [$og_image_url, 'og_image_url'];
+    $variables['page']['#attached']['html_head'][] = [$twitter_cards_title, 'twitter_cards_title'];
+    $variables['page']['#attached']['html_head'][] = [$twitter_cards_image, 'twitter_cards_image'];
+    $variables['page']['#attached']['html_head'][] = [$twitter_cards_description, 'twitter_cards_description'];
+    if($path_args[1] == 'hire-developer'){
+      $variables['head_title']['title'] = $title['#attributes']['content'];
+    }
+
+    if($path_args[1]== 'technology'){      
+      $head_title = ucfirst(str_replace('-',' ',$path_args[2])).' Technology Detail | AddWeb Solution';      
+      $variables['head_title']['title'] = $head_title;
+    }
+
+  } 
+
+  /* Set Metatag for Portfolio Page */ 
+  if ($path_args[1] == 'portfolio' && isset($path_args[2])){        
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {     
+      if ($node->bundle() == 'portfolio') {        
+        $technologies = reset($node->field_technology->referencedEntities());              
+        if(!empty($technologies)){     
+          $firstTag = $technologies->getName();
+          $variables['title'] = $firstTag. "  " . $node->getTitle() . ' | AddWeb Solution';
+          $variables['head_title']['title'] = $variables['title'];   
+        }
+      }
+    }else {
+          $sec_arg = str_replace("-"," ",$path_args[2]);
+          $vocabulary_tech_title = 'technology';
+          $taxonomy_machine_name_tech_title = taxonomy_term_machine_name_load($sec_arg, $vocabulary_tech_title);
+        if(isset($taxonomy_machine_name_tech_title)) {
+          $tech_name_title = $taxonomy_machine_name_tech_title->getName();
+          $variables['title'] = $tech_name_title. ' Portfolio | AddWeb Solution';
+          $variables['head_title']['title'] = $variables['title'];
+        }
+      /*$sec_arg = str_replace("-"," ",$path_args[2]);      
+      $second_arg_cap = ucwords($sec_arg);
+      $variables['title'] = $second_arg_cap. ' Portfolio | AddWeb Solution';
+      $variables['head_title']['title'] = $variables['title'];*/
+    }  
+  }   
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function addweb_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+function addweb_preprocess_node(&$variables) {  
+  $request_path = \Drupal::request()->getRequestUri();
+  $request_path_stripped = explode('?', $request_path);
+  $request_path_stripped = reset($request_path_stripped);
+  
+   //_addweb_render_block_by_id('ratingblock', $variables);
+  _addweb_render_block_by_id('views_block__blogs_block_4', $variables);
+  _addweb_render_block_by_id('views_block__related_blogs_block_1', $variables);
+  _addweb_render_block_by_id('views_block__testimonials_block_1', $variables);
+
+  
+  /*if(!empty($request_path) && ($request_path != '/contact')) {
+    _addweb_render_block_by_id('webform', $variables,'client-block-2');
+  } */
+  $block = \Drupal\block\Entity\Block::load('webform');
+  $block_content = \Drupal::entityManager()
+   ->getViewBuilder('block')
+   ->view($block);
+  $variables["webform1"]=$block_content;  
+  $variables['request_path'] = $request_path_stripped;
+  $variables['base_path'] = base_path();
+  global $base_url;
+  $variables['base_url'] = $base_url;
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);  
+  $variables['first_argument'] = $path_args[1];
+  if($variables['first_argument']== 'web-design-service'){
+    _addweb_render_block_by_id("views_block__our_services_block_1",$variables);
+  }
+
+  if($variables['first_argument']== 'web-development-service'){
+    _addweb_render_block_by_id("views_block__our_services_block_2",$variables);
+  }
+  _addweb_render_block_by_id('views_block__related_portfolio_block_1', $variables); 
+  
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $variables['node_type'] = $node->bundle();  
+     
+    if($variables['node_type']== 'page'){
+      $title = $node->get('field_display_type')->getValue();
+      if(!empty($title)){
+        $variables['display_type'] = $title['0']['value'];     
+      }
+    }
+    if($variables['node_type'] == 'services'){    
+        $service_tags = $node->get('field_service_tags')->getValue();
+        
+        foreach ( $service_tags as $element ) {                
+          $tags_id[] =  $element['target_id'];                     
+        }  
+        $tags_id = implode(',',$tags_id);      
+        $relatedBlogs = views_embed_view('related_blogs', 'block_2', $tags_id);        
+        if(!empty(trim(strip_tags(drupal_render($relatedBlogs))))){           
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }else{
+          $relatedBlogs = views_embed_view('related_blogs', 'block_2', '242');
+          $variables["relatedBlogs"] = $relatedBlogs;  
+        }             
+    }   
+  }
+
+  if(isset($variables['node'])){   
+    if($variables['node']->getType() == 'page'){  
+      if($variables['node']->field_display_type->value == 'services'){
+        $nid=$variables['node']->id();      
+        $node = \Drupal\node\Entity\Node::load($nid); 
+        $paragraph = $node->field_paragraph_type->getValue();
+        $service_tags_id = '242';
+        foreach ( $paragraph as $element ) {
+          $p = \Drupal\paragraphs\Entity\Paragraph::load( $element['target_id'] );     
+          if(!empty($p->field_service_tags->target_id)){
+            $service_tags_id = $p->field_service_tags->target_id;            
+          }         
+        }
+        $relatedArticles = views_embed_view('related_portfolio', 'block_1', $service_tags_id);
+        if(!empty(trim(strip_tags(drupal_render($relatedArticles))))){    
+          $variables["relatedPortfolio"] = $relatedArticles; 
+        }else{
+          $relatedArticles = views_embed_view('related_portfolio', 'block_1', '242');
+          $variables["relatedPortfolio"] = $relatedArticles; 
+        }  
+      }
+    }
+  }
+
+}
+
+function addweb_form_alter(&$form,$form_state, $form_id) {  
+  if ($form_id == 'webform_submission_career_add_form') {    
+    //$form['career_post_title']['submit']['#validate'][] = 'addweb_form_validate';
+  }
+  //wrap div around the contact-us form
+  if($form_id == 'webform_submission_contact_node_2_add_form') {
+     $form['#prefix'] = '<div class="contact-back-image">';
+     $form['#suffix'] = '</div>';
+  }
+  if($form_id == 'webform_submission_contact_node_464_add_form') {
+     $form['#prefix'] = '<div class="contact-back-image">';
+     $form['#suffix'] = '</div>';
+  }
+}
+
+
+
+function addweb_preprocess_page_title(&$variables) {
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+  $path_args = explode('/', $current_path);
+
+  $first_argument = $path_args[1];
+  $second_argument = $path_args[2];
+
+  $variables['first_argument'] = $path_args[1];
+  $variables['second_argument'] = $path_args[2];
+
+  if ($first_argument == 'hire-developer' && isset($second_argument)) {
+     $mach_name = $path_args[2];
+     $mach_name_replace = str_replace('-', ' ', $mach_name);
+     $mach_name_cap = ucwords($mach_name_replace);
+     $new_title = 'Hire '.$mach_name_cap.' Developer';
+     $variables['title'] = $new_title;
+  }
+
+  if ($first_argument == 'thank-you' || $first_argument == 'thanks-for-applying'){
+     $variables['title'] = 'thank-you';
+
+  }
+
+  if ($first_argument == 'technology' && isset($second_argument)) {
+     $m_name = $path_args[2];
+     $m_name_replace = str_replace('-', ' ', $m_name);
+     $m_name_cap = ucwords($m_name_replace);
+     $variables['title'] = 'Technology: '. $m_name_cap;
+  }
+
+  if ($first_argument == 'tags' && isset($second_argument)) {
+      $parameters =  \Drupal::routeMatch()->getParameters()->all();
+      $tag_name = $parameters['arg_0'];
+      $machine_name_replace = str_replace('-', '_', $tag_name);
+      $team_name = db_query("SELECT `name` FROM `taxonomy_term_field_data` WHERE `vid`='seo_tags'  AND  `machine_name`=:machine_name_replace ", array(":machine_name_replace" => $machine_name_replace))->fetchField();
+      $variables['title'] = 'Tag: '. $team_name;
+  }
+
+  if ($first_argument == 'blog-author' && isset($second_argument)) {
+     $user_title = $path_args[2];
+     $user_title_replace = str_replace('-', ' ', $user_title);
+     $user_title_cap = ucwords($user_title_replace);
+     $variables['title'] = 'User Blogs Reports: '. $user_title_cap;
+  }
+
+  if ($first_argument == 'portfolio' && isset($second_argument)){    
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      if ($node->bundle() == 'portfolio') {
+        $technologies = reset($node->field_technology->referencedEntities());
+        if(!empty($technologies)){
+          $firstTag = $technologies->getName();
+          $variables['title'] = $firstTag . "  " . $node->getTitle();
+        }
+      }
+    } else {
+      $vocabulary_tech = 'technology';
+      $taxonomy_machine_name_tech = taxonomy_term_machine_name_load($second_argument, $vocabulary_tech);
+      if(isset($taxonomy_machine_name_tech)) {
+        $tech_name = $taxonomy_machine_name_tech->getName();
+        $variables['title'] = $tech_name. ' Portfolio';
+      }
+      /*$sec_arg = str_replace("-"," ",$second_argument);
+      $second_arg_cap = ucwords($sec_arg);
+      $variables['title'] = $second_arg_cap. ' Portfolio';*/
+    }
+  }
+  if ($first_argument == 'industry' && isset($second_argument)) {    
+      $sec_arg = str_replace("-"," ",$second_argument);
+      $second_arg_cap = ucwords($sec_arg);
+      $machine_name_replace = str_replace('-', '_', $second_argument);
+      $team_name = db_query("SELECT `name` FROM `taxonomy_term_field_data` WHERE `vid`='industry'  AND  `machine_name`=:machine_name_replace ", array(":machine_name_replace" => $machine_name_replace))->fetchField();      
+      $variables['title'] = $team_name. ' Industry Portfolios';
+    } 
+}
+
+/*
+* hook_page_attachments_alter
+*
+*/
+
+//to remove zoom effect for stay in touch section in mobile view
+function addweb_page_attachments_alter(array &$page) {
+    $viewport = [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+      ],
+    ];
+    $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+}

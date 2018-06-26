@@ -1,0 +1,21 @@
+uuid: bd73fc11-6f8e-4fc8-80d7-150ef61fc5d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_user_favorite_line
+field_name: field_user_favorite_line
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

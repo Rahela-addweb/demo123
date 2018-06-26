@@ -1,0 +1,9 @@
+uuid: 76fb935e-0e97-40e2-ba51-e16a45dbd1c7
+langcode: en
+status: true
+dependencies: {  }
+id: service_values
+label: 'Service values'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

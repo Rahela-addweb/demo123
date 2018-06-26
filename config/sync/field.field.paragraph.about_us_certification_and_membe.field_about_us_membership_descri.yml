@@ -1,0 +1,21 @@
+uuid: 64829b5f-396b-43c4-a83a-a4ac54026071
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_about_us_membership_descri
+    - paragraphs.paragraphs_type.about_us_certification_and_membe
+  module:
+    - text
+id: paragraph.about_us_certification_and_membe.field_about_us_membership_descri
+field_name: field_about_us_membership_descri
+entity_type: paragraph
+bundle: about_us_certification_and_membe
+label: 'About US Membership Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

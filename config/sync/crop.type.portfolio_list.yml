@@ -1,0 +1,12 @@
+uuid: 02079e2a-85d7-4e2a-8ea4-4e9df2ab4bc2
+langcode: en
+status: true
+dependencies: {  }
+label: 'Portfolio List'
+id: portfolio_list
+description: ''
+aspect_ratio: '354:255'
+soft_limit_width: 354
+soft_limit_height: 255
+hard_limit_width: 354
+hard_limit_height: 255

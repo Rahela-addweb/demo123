@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/selectric.css: {}
+      css/owl.carousel.min.css: {}
+      css/owl.theme.default.min.css: {}
+      css/jquery.rateyo.min.css: {}
+      css/style.css: {}
+
+  js:
+    js/typed/typed.js: {}
+    js/jquery.selectric.min.js: {}
+    js/masonry.pkgd.min.js: {}
+    js/jquery.rateyo.js: {}
+    js/owl.carousel.min.js: {}
+    js/theme.js: {}
+    js/jquery.rateyo.min.js: {}
+    src/js/jquery.rateyo.js: {}
+    myjs/site_alter.js: {}

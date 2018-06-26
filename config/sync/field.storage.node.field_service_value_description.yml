@@ -1,0 +1,19 @@
+uuid: 081697c1-680b-46bd-90a2-97a9a22035ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_service_value_description
+field_name: field_service_value_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+uuid: 3d449aab-8236-42ec-b776-c67b27f04ac7
+langcode: en
+status: true
+dependencies: {  }
+label: 'User Image'
+id: user_image
+description: ''
+aspect_ratio: '36:36'
+soft_limit_width: 36
+soft_limit_height: 36
+hard_limit_width: 36
+hard_limit_height: 36

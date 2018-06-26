@@ -1,0 +1,28 @@
+uuid: cc122617-5321-43ee-ada8-a6d4211475a0
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.quick-links
+  module:
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: quicklinks
+theme: addweb
+region: footer
+weight: -27
+provider: null
+plugin: 'system_menu_block:quick-links'
+settings:
+  id: 'system_menu_block:quick-links'
+  label: 'Quick Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

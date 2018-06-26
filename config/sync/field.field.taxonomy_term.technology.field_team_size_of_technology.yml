@@ -1,0 +1,19 @@
+uuid: 6b07e96d-243a-4d02-82ab-7ad96e60ad97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_team_size_of_technology
+    - taxonomy.vocabulary.technology
+id: taxonomy_term.technology.field_team_size_of_technology
+field_name: field_team_size_of_technology
+entity_type: taxonomy_term
+bundle: technology
+label: 'Team Size of Technology'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

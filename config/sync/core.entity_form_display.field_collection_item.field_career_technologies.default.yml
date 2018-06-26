@@ -1,0 +1,30 @@
+uuid: f9c8b40e-7afa-4efa-9ed4-eeea84120483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_career_technologies.field_technology_percentage
+    - field.field.field_collection_item.field_career_technologies.field_technology_referencecollec
+    - field_collection.field_collection.field_career_technologies
+id: field_collection_item.field_career_technologies.default
+targetEntityType: field_collection_item
+bundle: field_career_technologies
+mode: default
+content:
+  field_technology_percentage:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_technology_referencecollec:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

@@ -1,0 +1,31 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Layout SCSS.
+ */
+
+
+/* Import of variables created for site */
+@import 'abstractions/variable';
+@import 'abstractions/mixins';
+@import 'abstractions/fonts';
+@import 'abstractions/base';
+@import 'abstractions/typography';
+
+@import 'modules/module_social';
+@import 'globals/forms';
+@import 'components/components';
+
+@import 'globals/header';
+@import 'globals/footer';
+
+@import 'layout/home';
+@import 'layout/blog';
+@import 'layout/basic_page';
+@import 'layout/about-us';
+@import 'layout/company_page';
+@import 'layout/interior';
+@import 'layout/awards';
+@import 'layout/product';
+@import 'layout/service';

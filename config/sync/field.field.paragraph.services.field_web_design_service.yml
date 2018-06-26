@@ -1,0 +1,23 @@
+uuid: eeed78bc-95da-4462-8d48-bbb37dcb74fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_web_design_service
+    - paragraphs.paragraphs_type.services
+id: paragraph.services.field_web_design_service
+field_name: field_web_design_service
+entity_type: paragraph
+bundle: services
+label: 'Web Design Service'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

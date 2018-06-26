@@ -1,0 +1,12 @@
+uuid: 1ea72469-cf40-48ea-99a4-d550de657471
+langcode: en
+status: true
+dependencies: {  }
+label: 'School Mangement Slider'
+id: school_mangement_slider
+description: ''
+aspect_ratio: '1500:1500'
+soft_limit_width: 1500
+soft_limit_height: 1500
+hard_limit_width: 1500
+hard_limit_height: 1500

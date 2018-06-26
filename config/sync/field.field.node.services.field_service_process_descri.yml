@@ -1,0 +1,21 @@
+uuid: 19f6b3c3-a723-4663-8420-0152594697d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_process_descri
+    - node.type.services
+  module:
+    - text
+id: node.services.field_service_process_descri
+field_name: field_service_process_descri
+entity_type: node
+bundle: services
+label: 'Service process description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

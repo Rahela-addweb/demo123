@@ -1,0 +1,198 @@
+uuid: 9f437fbf-cb13-495b-959a-6521c7d016cf
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: career
+title: Career
+description: ''
+category: ''
+elements: "'#attributes':\n  class:\n    - webform-contact-us-form\ncontact_header_markup:\n  '#type': processed_text\n  '#text': \"<div class=\\\"contact-markup\\\"><span class=\\\"contact-help\\\"><span class=\\\"contact-we\\\">We</span> are here to help</span>\\r\\n<div class=\\\"contact-header\\\">We have got so friendly and expert consultants. They are always happy to help you even if it's a trivial worry of yours or have a big bang rapid fire from you.&nbsp;</div>\\r\\n</div>\\r\\n\"\n  '#format': full_html\nname:\n  '#type': textfield\n  '#title': Name\n  '#title_display': invisible\n  '#placeholder': 'Name *'\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': invisible\n  '#placeholder': 'Email *'\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nphone_no:\n  '#type': textfield\n  '#title': 'Phone No'\n  '#title_display': invisible\n  '#placeholder': 'Phone No.'\n  '#pattern': '^[789]\\d{9}$'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#placeholder': 'Message *'\n  '#required': true\ncareer_form_captcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: /career-enquiry
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: url
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: thanks-for-applying
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+  wizard_comfirmation: true
+  wizard_comfirmation_label: ''
+  form_required: false
+  form_submit_back: false
+  form_login: false
+  form_login_message: ''
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  limit_total_interval: null
+  limit_user_interval: null
+  entity_limit_total_interval: null
+  entity_limit_user_interval: null
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email_notification:
+    id: email
+    label: 'AddWeb Career Form Enquiry'
+    handler_id: email_notification
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: hr@addwebsolution.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: mr.ashishjain@gmail.com
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name]'
+      subject: 'AddWeb Career Form Enquiry'
+      body: "<p><strong>Submitted on:</strong> [webform-submission:created]</p>\n\n<p><strong>Submitted values are:</strong></p>\n\n<p><strong>Name:</strong> [webform_submission:values:name]</p>\n\n<p><strong>Email:</strong> [webform_submission:values:email]<br />\n<br />\n<strong>Mobile Number: </strong>[webform_submission:values:phone_no]</p>\n\n<p><strong>Message:</strong> [webform_submission:values:message]</p>\n\n<p><strong>IP Address:</strong> [webform_submission:ip-address]</p>\n\n<p><strong>Current URL :</strong> [current-page:url]</p>\n\n<p><strong>Career Post Name :</strong> [current-page:query:post-title]</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      twig: false
+  email_notification_for_career_enquiry_for_visitor:
+    id: email
+    label: 'Career Enquiry'
+    handler_id: email_notification_for_career_enquiry_for_visitor
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'Career Enquiry'
+      body: "<table cellpadding=\"0\" cellspacing=\"0\" style=\"max-width: 700px; width: 100%; margin: 0 auto; border-collapse: collapse; border-spacing: 0; border: none;\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; border-spacing: 0; border: none; background: #fff;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr style=\"background-color: #005F85;\">\r\n\t\t\t\t\t\t<td style=\"padding-bottom:15px; padding-left:15px; padding-top:15px; text-align:left; width:20%\"><img alt=\"image\" src=\"[site:url]themes/custom/addweb/images/logo.png\" style=\"width: 100px;\" /></td>\r\n\t\t\t\t\t\t<td style=\"padding-bottom:15px; padding-top:15px; text-align:right\">\r\n\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%;\">\r\n\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-bottom:15px; text-align:right\"><img alt=\"\" src=\"[site:url]themes/custom/addweb/images/phone.png\" style=\"padding-right: 5px; vertical-align: middle;\" /><span style=\"font-size:12px; padding-right:15px; vertical-align:middle; width:100%\"><a style=\"color:#ffffff; cursor: not-allowed; text-decoration: none\">+1-210-346-9359</a></span></td>\r\n\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t\t<td style=\"text-align:right\"><img alt=\"\" src=\"[site:url]themes/custom/addweb/images/mail-email.png\" style=\"padding-right: 5px; vertical-align: middle;\" /><span style=\"font-size:12px; padding-right:15px; width:100%\"><a href=\"mailto:contact@addwebsolution.com\" style=\"color:#ffffff; text-decoration: none\">contact@addwebsolution.com</a></span></td>\r\n\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#f6f6f6; padding:30px 0\">\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0; border: none;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td style=\"color:#005f85; font-size:28px; font-weight:700; text-align:center\">Thanks For Applying</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0; border: none; background-color: #F6F6F6;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td style=\"color:#414141; font-size:14px; font-weight:500; padding:20px 30px; text-align:center\">Your message has been received and we will be contacting you shortly. If you would like to speak to someone feel free to call us on <span><a style=\"color:#414141; cursor: not-allowed; text-decoration: none\">+91-79-40058816</a></span>.</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"max-width: 500px; width: 100%; border-collapse: collapse; border-spacing: 0; border: none;\">\r\n\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#565656; padding-bottom:12px; padding-top:12px\">\r\n\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0 auto;\">\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 100%; border-collapse: collapse; border-spacing: 0; border: none; margin: 10px auto 0; max-width: 220px;\">\r\n\t\t\t\t\t\t\t<tbody>\r\n\t\t\t\t\t\t\t\t<tr style=\"max-width: 100px;\">\r\n\t\t\t\t\t\t\t\t\t<td style=\"text-align:right\"><a href=\"https://www.drupal.org/addweb-solution-pvt-ltd\"><img alt=\"drupal\" src=\"[site:url]themes/custom/addweb/images/drupal-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"text-align:center\"><a href=\"http://www.facebook.com/addwebsolution.pvt.ltd\"><img alt=\"facebook\" src=\"[site:url]themes/custom/addweb/images/facebook-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"http://www.google.com/+Addwebsolution\"><img alt=\"google-plus\" src=\"[site:url]themes/custom/addweb/images/google-plus-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"http://skype:add.websolution?chat\"><img alt=\"skype\" src=\"[site:url]themes/custom/addweb/images/skype-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"mailto:contact@addwebsolution.com\"><img alt=\"mail\" src=\"[site:url]themes/custom/addweb/images/mail-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"https://www.linkedin.com/company/addwebsolution\"><img alt=\"in\" src=\"[site:url]themes/custom/addweb/images/linkedin-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"http://www.twitter.com/addwebsolution\"><img alt=\"twitter\" src=\"[site:url]themes/custom/addweb/images/twitter-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t\t<td style=\"padding-right:3px; text-align:center\"><a href=\"https://www.youtube.com/channel/UCtZHMXcJ8lLW-ikFNKOszlQ\"><img alt=\"youtube\" src=\"[site:url]themes/custom/addweb/images/youtube-email.png\" /></a></td>\r\n\t\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t</tbody>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<td><span style=\"color:#ffffff; font-size:14px; text-decoration:none\">&copy; 2018 <a href=\"https://www.addwebsolution.com/\" style=\"color: #FFDF27; text-decoration: none;\">Addweb Solution.</a> All Rights Reserved</span></td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

@@ -1,0 +1,18 @@
+uuid: 29fe9733-1019-43f1-97f0-9ad2fda1747b
+langcode: en
+status: true
+dependencies: {  }
+id: home
+label: Home
+targetMenu:
+  main-navigation-left: main-navigation-left
+  main-navigation-right: main-navigation-right
+  admin: '0'
+  footer: '0'
+  main: '0'
+  quick-links: '0'
+  sitemap: '0'
+  social-media: '0'
+  tools: '0'
+  top-menu: '0'
+  account: '0'

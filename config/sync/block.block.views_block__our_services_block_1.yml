@@ -1,0 +1,36 @@
+uuid: ed729525-1a43-4a7a-b08e-1bf25cc03f0a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.our_services
+  module:
+    - block_class
+    - node
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__our_services_block_1
+theme: addweb
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:our_services-block_1'
+settings:
+  id: 'views_block:our_services-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

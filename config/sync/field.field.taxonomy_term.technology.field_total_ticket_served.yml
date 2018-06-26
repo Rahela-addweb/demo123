@@ -1,0 +1,19 @@
+uuid: da7c1b7b-2037-4e7f-9c5e-a018185de9cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_total_ticket_served
+    - taxonomy.vocabulary.technology
+id: taxonomy_term.technology.field_total_ticket_served
+field_name: field_total_ticket_served
+entity_type: taxonomy_term
+bundle: technology
+label: 'Total Ticket Served'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

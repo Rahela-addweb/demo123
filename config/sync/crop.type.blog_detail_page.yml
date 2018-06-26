@@ -1,0 +1,12 @@
+uuid: 5d3c6d18-a57b-46af-bd63-f0a0d832b8e3
+langcode: en
+status: true
+dependencies: {  }
+label: 'Blog Detail Page'
+id: blog_detail_page
+description: ''
+aspect_ratio: '663:495'
+soft_limit_width: 663
+soft_limit_height: 495
+hard_limit_width: 663
+hard_limit_height: 495

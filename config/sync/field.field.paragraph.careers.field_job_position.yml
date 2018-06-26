@@ -1,0 +1,28 @@
+uuid: 58dbf878-b534-4160-b1b0-780fdf8e639d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_position
+    - paragraphs.paragraphs_type.careers
+    - taxonomy.vocabulary.job_position
+id: paragraph.careers.field_job_position
+field_name: field_job_position
+entity_type: paragraph
+bundle: careers
+label: 'Job Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      job_position: job_position
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

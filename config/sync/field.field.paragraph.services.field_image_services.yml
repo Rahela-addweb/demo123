@@ -1,0 +1,38 @@
+uuid: 075adfc1-6165-430b-a8ca-b93bf3b066a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_services
+    - paragraphs.paragraphs_type.services
+  module:
+    - image
+id: paragraph.services.field_image_services
+field_name: field_image_services
+entity_type: paragraph
+bundle: services
+label: 'Image services'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: true
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

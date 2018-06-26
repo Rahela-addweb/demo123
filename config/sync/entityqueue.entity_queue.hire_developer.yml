@@ -1,0 +1,25 @@
+uuid: 3e75ecc7-ceea-43a1-adcd-8b725cfde900
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: hire_developer
+label: 'Hire Developer'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: taxonomy_term
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse_in_admin: false

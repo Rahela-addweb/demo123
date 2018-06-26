@@ -1,0 +1,9 @@
+uuid: 9d1ad8fd-acaf-4775-81b0-934fba1a8990
+langcode: en
+status: true
+dependencies: {  }
+id: solution
+label: Solution
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

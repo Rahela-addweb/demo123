@@ -1,0 +1,67 @@
+uuid: 22e816d9-6eb8-4f3e-9dbe-b80f4b4ba5af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services_banner_header
+    - node.type.services
+    - paragraphs.paragraphs_type.service_banner
+  module:
+    - entity_reference_revisions
+id: node.services.field_services_banner_header
+field_name: field_services_banner_header
+entity_type: node
+bundle: services
+label: 'Services Banner Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      service_banner: service_banner
+    target_bundles_drag_drop:
+      about_us_certification_and_membe:
+        weight: 14
+        enabled: false
+      about_us_header_info:
+        weight: 15
+        enabled: false
+      awards_and_achievements_banner:
+        weight: 16
+        enabled: false
+      careers:
+        weight: 17
+        enabled: false
+      code:
+        weight: 18
+        enabled: false
+      description:
+        weight: 19
+        enabled: false
+      images:
+        weight: 20
+        enabled: false
+      product_feature:
+        weight: 21
+        enabled: false
+      product_join_us_block:
+        weight: 22
+        enabled: false
+      service_banner:
+        enabled: true
+        weight: 23
+      service_values:
+        weight: 24
+        enabled: false
+      services:
+        weight: 25
+        enabled: false
+      solution:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

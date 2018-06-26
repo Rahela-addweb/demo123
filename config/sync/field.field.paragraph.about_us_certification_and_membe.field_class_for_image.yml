@@ -1,0 +1,21 @@
+uuid: fc47e99e-a3bc-431f-870b-165a88e16d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_class_for_image
+    - paragraphs.paragraphs_type.about_us_certification_and_membe
+  module:
+    - options
+id: paragraph.about_us_certification_and_membe.field_class_for_image
+field_name: field_class_for_image
+entity_type: paragraph
+bundle: about_us_certification_and_membe
+label: 'class for Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

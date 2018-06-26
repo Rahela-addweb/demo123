@@ -1,0 +1,22 @@
+uuid: 3afbf83d-cde8-460b-b0eb-4350e2a8c1ac
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Global
+tags:
+  content_language: english
+  shortlink: '[current-page:url:unaliased]'
+  canonical_url: '[current-page:url:absolute]'
+  robots: 'index, follow'
+  referrer: no-referrer
+  title: '[current-page:title] | [current-page:pager][site:name]'
+  google_plus_publisher: 'https://plus.google.com/+Addwebsolution'
+  og_site_name: '[site:name]'
+  og_type: Article
+  og_title: '[current-page:title]'
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_type: summary

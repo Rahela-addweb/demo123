@@ -1,0 +1,7 @@
+addweb_subscribe_data:
+ path: 'admin/custom/subscribe-data'
+ defaults:
+  _controller: '\Drupal\addweb_subscribe_data\Controller\SubscriptionDataController::subscriptiondataPage'
+  _title: 'Subscription Data'
+ requirements:
+   _permission: 'access content'

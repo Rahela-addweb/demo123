@@ -1,0 +1,31 @@
+uuid: 1afaea9a-17a6-4039-bb12-7412e4ae0fa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_default_blogs
+    - taxonomy.vocabulary.technology
+  content:
+    - 'taxonomy_term:technology:c60e53aa-c042-4d3a-9d92-cd709137d423'
+id: taxonomy_term.technology.field_default_blogs
+field_name: field_default_blogs
+entity_type: taxonomy_term
+bundle: technology
+label: 'Default blogs'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c60e53aa-c042-4d3a-9d92-cd709137d423
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

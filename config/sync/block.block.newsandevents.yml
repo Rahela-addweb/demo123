@@ -1,0 +1,35 @@
+uuid: b0f06129-7c56-4428-b41d-d77e67af3f71
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:52b33761-4739-46c3-bcae-7f81954ec573'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: news-event-header
+id: newsandevents
+theme: addweb
+region: header
+weight: -16
+provider: null
+plugin: 'block_content:52b33761-4739-46c3-bcae-7f81954ec573'
+settings:
+  id: 'block_content:52b33761-4739-46c3-bcae-7f81954ec573'
+  label: 'News and Events'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /news
+    negate: false
+    context_mapping: {  }

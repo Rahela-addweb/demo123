@@ -1,0 +1,19 @@
+uuid: 19947dd6-7412-46cf-a04f-7424cd68ffb0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hj6zGNwndnW_J6lKfFcg-tY5e5YqWfgXyt0qioGtXL8
+name: 'Default newsletter'
+id: default
+description: 'This is an example newsletter. Change it.'
+format: plain
+priority: 0
+receipt: true
+from_name: 'Addweb Solution'
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: contact@addwebsolution.com
+hyperlinks: false
+new_account: none
+opt_inout: double
+weight: 0

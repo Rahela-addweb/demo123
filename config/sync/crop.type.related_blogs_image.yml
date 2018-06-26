@@ -1,0 +1,12 @@
+uuid: 23081a8f-ecee-439a-9394-48ffe0d7c0a1
+langcode: en
+status: true
+dependencies: {  }
+label: 'Related Blogs Image'
+id: related_blogs_image
+description: ''
+aspect_ratio: '267:200'
+soft_limit_width: 267
+soft_limit_height: 200
+hard_limit_width: 267
+hard_limit_height: 200

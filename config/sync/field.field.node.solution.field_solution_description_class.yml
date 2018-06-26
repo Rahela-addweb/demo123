@@ -1,0 +1,23 @@
+uuid: b8b36b56-fe2c-4f46-93ec-f818efab1560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution_description_class
+    - node.type.solution
+  module:
+    - options
+id: node.solution.field_solution_description_class
+field_name: field_solution_description_class
+entity_type: node
+bundle: solution
+label: 'Solution Description Class'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: one-col-text-container
+default_value_callback: ''
+settings: {  }
+field_type: list_string

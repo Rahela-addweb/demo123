@@ -1,0 +1,243 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Footer SCSS.
+ */
+
+
+.footer {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  padding: 30px 0;
+  border-top: 3px solid $black;
+  background-color: $white;
+  line-height: normal;
+  /*font-family: $lato-regular;*/
+  @media (min-width: 992px) {
+    .col-md-6 {
+      width: 25%;
+    }
+  }
+  h2 {
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+    border-bottom: 1px dotted $black-22;
+    color: $black-31;
+    font-size: 16px;
+    line-height: normal;
+    /*font-family: $sourcesanspro-semibold;*/
+    text-transform: none;
+    opacity: .7;
+  }
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        line-height: 25px;
+        a {
+          display: inline-block;
+          padding: 10px 0;
+          background-color: transparent;
+          color: $gray-4a;
+          font-size: 14px;
+          line-height: 0;
+          opacity: .8;
+          @include transition(all .4s linear);
+          &:hover {
+            background-color: transparent;
+            text-decoration: underline;
+            text-indent: 2px;
+          }
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .footer-twitter {
+    .twitter-block-footer {
+      display: inline-block;
+      height: 300px;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  .footer-tag-cloud {
+    .tag-cloud-bottom {
+      /*margin-top: 25px;*/
+      .views-row {
+        display: inline-block;
+        width: auto;
+        .views-field-name {
+          display: inline-block;
+          width: 100%;
+          .field-content {
+            display: inline-block;
+            margin: 4px 0;
+            /*font-family: $lato-semibold;*/
+            @include border-radius(3px);
+          }
+          a {
+            display: inline;
+            width: 100%;
+            margin: 3px 2px;
+            padding: 5px 10px;
+            border-left: none;
+            background-color: $gray-47;
+            color: $gray-b8;
+            font-size: 10px;
+            line-height: 18px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            /*font-family: $lato-semibold;*/
+            @include border-radius(3px);
+            &:hover {
+              background-color: $blue-00;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  #block-getintouch {
+    ul {
+      margin: 0 0 15px;
+      li {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 6px;
+        a {
+          float: left;
+          display: inline-block;
+          padding-left: 30px;
+          font-size: 14px;
+          vertical-align: top;
+          @include transition(all .4s linear);
+          &:hover {
+            text-indent: 2px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 13px;
+          }
+        }
+        &.phone,
+        &.email {
+          &::before {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 18px;
+            width: 23px;
+            background-image: $contact-icon;
+            background-position: right 0;
+            background-repeat: no-repeat;
+            background-size: 200px;
+            vertical-align: top;
+            content: '';
+          }
+        }
+        &.email {
+          &::before {
+            background-position: -57px 1px;
+            background-size: 170px;
+          }
+        }
+      }
+      &.social-icons {
+        float: left;
+        margin: 10px 0 20px;
+        li {
+          width: auto;
+          a {
+            padding: 0 4px;
+            font-size: 0;
+          }
+          &.email {
+            &::before {
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-quicklink,
+  .footer-twitter,
+  .footer-tag-cloud,
+  .footer-getintouch {
+    @media (max-width: 992px) {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+  .nap-code {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid $black-de;
+    p { font-size: 13px; }
+    strong { color: $black-31; }
+    span {
+      color: $gray-4a;
+      font-size: 14px;
+      opacity: .8;
+      a {
+        line-height: 25px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .footer-tag-cloud { clear: left; }
+  }
+}
+
+/*@media (min-width: 1025px) {
+  .path-frontpage,
+  .path-portfolio,
+  .path-news,
+  .page-node-type-portfolio,
+  .path-hire-developer {
+    padding-bottom: 550px;
+    .footer {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-top: none;
+      opacity: 0;
+      &.fixed-footer {
+        z-index: 0;
+        opacity: 1;
+      }
+    }
+  }
+}*/
+/*@media (max-width: 992px) {
+  .path-frontpage,
+  .path-news,
+  .path-hire-developer,
+  .page-node-type-portfolio,
+  .path-portfolio {
+    .footer {
+      border-top: none;
+    }
+  }
+}
+*/

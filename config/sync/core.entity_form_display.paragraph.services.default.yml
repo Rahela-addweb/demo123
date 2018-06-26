@@ -1,0 +1,75 @@
+uuid: 388f1a4f-c8ac-40bf-a6c8-5c38b1b1bfc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services.field_body_services
+    - field.field.paragraph.services.field_image_services
+    - field.field.paragraph.services.field_service_icon_title
+    - field.field.paragraph.services.field_service_seo_title
+    - field.field.paragraph.services.field_service_tags
+    - field.field.paragraph.services.field_web_design_service
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.services
+  module:
+    - image
+    - text
+id: paragraph.services.default
+targetEntityType: paragraph
+bundle: services
+mode: default
+content:
+  field_body_services:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image_services:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_service_icon_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_service_seo_title:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_service_tags:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_web_design_service:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

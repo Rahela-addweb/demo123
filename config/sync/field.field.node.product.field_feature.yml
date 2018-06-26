@@ -1,0 +1,67 @@
+uuid: f256394d-1b75-4083-848e-3d298a230acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature
+    - node.type.product
+    - paragraphs.paragraphs_type.product_feature
+  module:
+    - entity_reference_revisions
+id: node.product.field_feature
+field_name: field_feature
+entity_type: node
+bundle: product
+label: Feature
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      product_feature: product_feature
+    target_bundles_drag_drop:
+      about_us_certification_and_membe:
+        weight: 14
+        enabled: false
+      about_us_header_info:
+        weight: 15
+        enabled: false
+      awards_and_achievements_banner:
+        weight: 16
+        enabled: false
+      careers:
+        weight: 17
+        enabled: false
+      code:
+        weight: 18
+        enabled: false
+      description:
+        weight: 19
+        enabled: false
+      images:
+        weight: 20
+        enabled: false
+      product_feature:
+        enabled: true
+        weight: 21
+      product_join_us_block:
+        weight: 22
+        enabled: false
+      service_banner:
+        weight: 23
+        enabled: false
+      service_values:
+        weight: 24
+        enabled: false
+      services:
+        weight: 25
+        enabled: false
+      solution:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

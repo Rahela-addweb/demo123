@@ -1,0 +1,22 @@
+uuid: 7ee542c9-6dd7-44f1-ac80-0c167ad37279
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.simple_mega_menu.field_body
+    - simple_megamenu.simple_mega_menu_type.home
+  module:
+    - text
+id: simple_mega_menu.home.field_body
+field_name: field_body
+entity_type: simple_mega_menu
+bundle: home
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

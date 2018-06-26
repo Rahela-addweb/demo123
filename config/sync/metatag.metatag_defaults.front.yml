@@ -1,0 +1,32 @@
+uuid: 083df6d8-ad36-4845-b214-9d90f4c12a05
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: 'Front page'
+tags:
+  keywords: 'web development india,web development company india,website development company India,UK,Canada'
+  content_language: english
+  referrer: no-referrer
+  description: 'AddWeb Solution leading website design and development company in India with a collective experience of leadership team we are best web development company'
+  canonical_url: '[site:url]'
+  original_source: 'http://www.addwebsolution.com/sites/default/files/inline-images/banner_0.jpg'
+  shortlink: '[site:url]'
+  title: 'Web Development Company India|Website Design & Development Company'
+  robots: 'index, follow'
+  google_plus_publisher: 'https://plus.google.com/+Addwebsolution'
+  google_plus_image: 'http://www.addwebsolution.com/sites/default/files/2017-02/background.jpg'
+  og_site_name: '[site:name]'
+  og_type: website
+  og_description: 'AddWeb Solution leading website design and development company With a collective experience of leadership team we are best web development company india'
+  og_title: 'Website Design And Development Company- AddWeb Solution'
+  og_image_url: 'http://staging.addwebsolution.com/sites/default/files/2017-06/background_1.jpg'
+  og_url: '[site:url]'
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_image: 'http://www.addwebsolution.com/sites/default/files/2017-02/background.jpg'
+  twitter_cards_type: summary
+  bing: 740CD6D309FC4413DEDECA676FAEF736
+  pinterest: 5ba45209091245bdaf69c0015c64d57c

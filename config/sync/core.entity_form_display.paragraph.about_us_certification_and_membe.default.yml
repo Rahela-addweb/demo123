@@ -1,0 +1,54 @@
+uuid: 67dcb426-daa9-4b0f-973f-4016ae12c32d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_us_certification_and_membe.field_about_us_membership_descri
+    - field.field.paragraph.about_us_certification_and_membe.field_about_us_membership_image
+    - field.field.paragraph.about_us_certification_and_membe.field_about_us_membership_link
+    - field.field.paragraph.about_us_certification_and_membe.field_class_for_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.about_us_certification_and_membe
+  module:
+    - image
+    - link
+    - text
+id: paragraph.about_us_certification_and_membe.default
+targetEntityType: paragraph
+bundle: about_us_certification_and_membe
+mode: default
+content:
+  field_about_us_membership_descri:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_about_us_membership_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_about_us_membership_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_class_for_image:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

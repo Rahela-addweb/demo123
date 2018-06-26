@@ -1,0 +1,9 @@
+uuid: 2ae1651c-120e-4533-a63b-f10c708c58ac
+langcode: en
+status: true
+dependencies: {  }
+id: careers
+label: Careers
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

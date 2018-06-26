@@ -1,0 +1,35 @@
+uuid: 146a71aa-45f7-40ef-8493-8f2052699ae9
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.related_portfolio
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__related_portfolio_block_1
+theme: addweb
+region: content_bottom
+weight: -21
+provider: null
+plugin: 'views_block:related_portfolio-block_1'
+settings:
+  id: 'views_block:related_portfolio-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

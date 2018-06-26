@@ -1,0 +1,23 @@
+uuid: 2c730861-9527-40f0-8549-cfbbafe474e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_solution_metatag
+    - node.type.solution
+  module:
+    - metatag
+id: node.solution.field_solution_metatag
+field_name: field_solution_metatag
+entity_type: node
+bundle: solution
+label: 'Solution Metatag'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

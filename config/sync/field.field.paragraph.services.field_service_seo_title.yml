@@ -1,0 +1,28 @@
+uuid: fc9c0573-3100-4b8c-bba0-fcad140247d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_seo_title
+    - paragraphs.paragraphs_type.services
+    - taxonomy.vocabulary.seo_tags
+id: paragraph.services.field_service_seo_title
+field_name: field_service_seo_title
+entity_type: paragraph
+bundle: services
+label: 'Service SEO Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      seo_tags: seo_tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

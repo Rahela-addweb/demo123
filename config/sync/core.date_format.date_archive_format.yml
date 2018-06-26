@@ -1,0 +1,8 @@
+uuid: b97fdf29-dcc4-47b2-a996-aadd49752501
+langcode: en
+status: true
+dependencies: {  }
+id: date_archive_format
+label: 'Date Archive Format'
+locked: false
+pattern: F

@@ -1,0 +1,39 @@
+uuid: 84edb538-7ef9-4675-b43f-cd7d778baceb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_service_page_banner_filter
+field_name: field_service_page_banner_filter
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hire-developer
+      label: 'Hire Developer'
+    -
+      value: solutions
+      label: Solution
+    -
+      value: services
+      label: Services
+    -
+      value: our-services
+      label: OurServices
+    -
+      value: portfolio
+      label: Portfolio
+    -
+      value: contact
+      label: Contact
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

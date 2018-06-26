@@ -1,0 +1,34 @@
+uuid: 498a1a9b-6790-4a81-b898-bcb88b198a51
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.blogs
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: related-blogs-block
+id: views_block__blogs_block_3
+theme: addweb
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:blogs-block_3'
+settings:
+  id: 'views_block:blogs-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /services
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: 88d87911-5ef6-49ad-beee-faf0bc638e57
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: portfolio_home_page
+label: 'Portfolio home page'
+effects:
+  48f40bcb-a1ea-4d5e-95cc-b7c1832de220:
+    uuid: 48f40bcb-a1ea-4d5e-95cc-b7c1832de220
+    id: image_resize
+    weight: -9
+    data:
+      width: 360
+      height: 260
+  531be615-9f46-4ce0-b8ac-543e654bb714:
+    uuid: 531be615-9f46-4ce0-b8ac-543e654bb714
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: portfolio_home_page

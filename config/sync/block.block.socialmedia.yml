@@ -1,0 +1,28 @@
+uuid: 17368170-e330-41d5-a402-51fbf0e2c184
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.social-media
+  module:
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: 'col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right'
+id: socialmedia
+theme: addweb
+region: footer
+weight: -23
+provider: null
+plugin: 'system_menu_block:social-media'
+settings:
+  id: 'system_menu_block:social-media'
+  label: 'Social Media'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

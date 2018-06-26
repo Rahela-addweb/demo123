@@ -1,0 +1,19 @@
+uuid: 26bc1878-255b-47d9-9782-62410923f97e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_total_project_delivered
+    - taxonomy.vocabulary.technology
+id: taxonomy_term.technology.field_total_project_delivered
+field_name: field_total_project_delivered
+entity_type: taxonomy_term
+bundle: technology
+label: 'Total Project Delivered'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

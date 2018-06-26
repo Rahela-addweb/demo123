@@ -1,0 +1,21 @@
+uuid: 512d4dc7-551c-40be-80fb-13eea505ddd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_seo_description
+    - paragraphs.paragraphs_type.service_banner
+  module:
+    - text
+id: paragraph.service_banner.field_service_seo_description
+field_name: field_service_seo_description
+entity_type: paragraph
+bundle: service_banner
+label: 'Service SEO Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

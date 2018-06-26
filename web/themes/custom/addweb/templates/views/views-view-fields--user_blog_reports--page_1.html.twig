@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="blog-teaser">
+  <div class="view-blog-inner">
+    <div class="blog-inner-detail">
+      <div class="blog-inner-author">
+        <div class="blog-title">
+          {% if fields.title.content | length > 0 %}
+            {{ fields.title.content }}
+          {% endif %}
+        </div>        
+      </div>
+      <div class="meta-info">
+        <div class="blog-author">
+          {% if fields.uid.content | length > 0 %}
+            {{ fields.uid.content }}
+          {% endif %}
+        </div>
+        <div class="blog-inner-post-date">
+          <div class="blog-post-date">
+            {% if fields.created.content | length > 0 %}
+              {{ fields.created.content }}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="blog-inner-comment-count">
+          <div class="blog-comment-count">
+            {% if fields.entity_id.content | length > 0 %}
+              {{ fields.entity_id.content }}
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="blog-inner-tags">
+          <div class="blog-tags">
+            {{ fields.field_technology.content }}
+            {% set tags=fields.field_seo_tags.content|render %}
+            {% if tags is not empty %}
+              {% if fields.field_technology.content|render is not empty %}{{'/ '}}{% endif %}{{ fields.field_seo_tags.content }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-image">
+      {% if fields.field_blog_image.content | length > 0 %}
+        {{ fields.field_blog_image.content }}
+      {% endif %}
+    </div>
+
+    <div class="blog-body">
+      {% if fields.body.content | length > 0 %}
+        {{ fields.body.content }}
+      {% endif %}
+    </div>
+  </div>
+</div>

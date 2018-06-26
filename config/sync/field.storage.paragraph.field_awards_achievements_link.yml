@@ -1,0 +1,19 @@
+uuid: 076d2c1d-1aa9-4fd4-b264-d289790b1ba9
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_awards_achievements_link
+field_name: field_awards_achievements_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

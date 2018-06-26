@@ -1,0 +1,23 @@
+uuid: 1ba053a8-b75f-44ac-9b04-77642ff4c6f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: industry
+label: Industry
+type: 'canonical_entities:taxonomy_term'
+pattern: 'industry/[term:name]'
+selection_criteria:
+  0779f511-60f7-4d35-8982-e7bfd834ed99:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      industry: industry
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0779f511-60f7-4d35-8982-e7bfd834ed99
+selection_logic: and
+weight: -5
+relationships: {  }

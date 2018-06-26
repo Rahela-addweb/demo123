@@ -1,0 +1,8 @@
+uuid: 818bb295-64b4-4154-911c-fae446e486ab
+langcode: en
+status: true
+dependencies: {  }
+id: header_banner
+label: 'Header Banner'
+revision: 0
+description: ''

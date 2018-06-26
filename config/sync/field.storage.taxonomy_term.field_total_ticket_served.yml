@@ -1,0 +1,21 @@
+uuid: ad32d5df-41b2-4f5a-9951-3deb7ee90933
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_total_ticket_served
+field_name: field_total_ticket_served
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

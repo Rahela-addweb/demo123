@@ -1,0 +1,9 @@
+uuid: 7acb43a8-a977-4c0e-93d3-c393a24d4561
+langcode: en
+status: true
+dependencies: {  }
+id: product_join_us_block
+label: 'Product Join Us Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

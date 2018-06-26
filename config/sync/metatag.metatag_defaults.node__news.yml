@@ -1,0 +1,26 @@
+uuid: 63c9a253-6494-4b68-86f2-bf305a1f9bff
+langcode: en
+status: true
+dependencies: {  }
+id: node__news
+label: 'Content: News'
+tags:
+  shortlink: '[current-page:url:unaliased]'
+  description: '[node:summary]'
+  robots: 'index, follow'
+  title: '[node:title] | [site:name]'
+  canonical_url: '[current-page:url:absolute]'
+  content_language: english
+  google_plus_publisher: 'https://plus.google.com/+Addwebsolution'
+  og_image_url: '[node:field_news_image]'
+  og_image: '[node:field_news_image]'
+  og_site_name: '[site:name]'
+  og_description: '[node:summary]'
+  og_url: '[current-page:url:absolute]'
+  og_title: '[node:title]'
+  og_type: Article
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_type: summary
+  twitter_cards_image: '[node:field_news_image]'

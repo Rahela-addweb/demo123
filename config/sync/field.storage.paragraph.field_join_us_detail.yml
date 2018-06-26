@@ -1,0 +1,19 @@
+uuid: 193f48fc-07f7-4a3e-a380-0857a3a19f34
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_join_us_detail
+field_name: field_join_us_detail
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

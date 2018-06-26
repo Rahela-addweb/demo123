@@ -1,0 +1,19 @@
+uuid: e6e167bf-4285-4ebf-9aea-7c6c28e7a54b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_banner
+    - field.storage.block_content.field_banner_title
+id: block_content.header_banner.field_banner_title
+field_name: field_banner_title
+entity_type: block_content
+bundle: header_banner
+label: 'Banner Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,34 @@
+uuid: c7efda98-5ba2-44b7-9020-ba19ccbb138d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.solution
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__solution_block_1
+theme: addweb
+region: content
+weight: -20
+provider: null
+plugin: 'views_block:solution-block_1'
+settings:
+  id: 'views_block:solution-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /solutions
+    negate: false
+    context_mapping: {  }

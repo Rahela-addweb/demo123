@@ -1,0 +1,51 @@
+<?php
+module_load_include('module', 'simplenews','simplenews');
+
+use Drupal\simplenews\Entity\Subscriber;
+use Drupal\simplenews\SubscriberInterface;
+use Symfony\Component\HttpFoundation;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Drupal\Core\Url;
+// do php code here
+
+/**
+ * Act after a new subscriber has been created.
+ *
+ * @ingroup subscriber
+ */
+function addweb_subscribe_data_simplenews_subscriber_insert($subscriber) {
+  $array = (array) $subscriber;
+  $subscribe_status = $array["\x00*\x00values"]["status"]["x-default"][0]["value"];
+  $subscriber_mail = $array["\x00*\x00values"]["mail"]["x-default"][0]["value"];
+         
+  $user_ip = \Drupal::request()->getClientIp();
+  //$user_ip = '8.8.8.8';
+  //$user_ip = '110.227.255.212';
+
+  $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $user_ip));
+  $userlocation = @$ipdat->geoplugin_countryName;
+
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+ // $date = date("Y-m-d H:i:s");
+    \Drupal::database()->insert('addweb_subscribe_data')
+           ->fields([
+             'ip',
+             'country',
+             'email_id',
+             'subscribe_user_satus',
+             'ref_url',
+           ])
+           ->values(array(
+             $user_ip,
+             $userlocation,
+             $subscriber_mail,
+             $subscribe_status,
+             $current_path
+           ))
+           ->execute();
+
+}

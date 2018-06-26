@@ -1,0 +1,9 @@
+uuid: 366686fd-36bb-45ad-8d49-885e92736fd4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Technical skill'
+vid: technical_skill
+description: 'Technical skill for the Career key skill'
+hierarchy: 0
+weight: 0

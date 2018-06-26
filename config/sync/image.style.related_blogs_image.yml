@@ -1,0 +1,22 @@
+uuid: 50791fbf-1cf2-4e76-924f-5a6c6ead29b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: related_blogs_image
+label: 'Related Blogs Image'
+effects:
+  88c77840-78ae-408b-b464-e7b341393147:
+    uuid: 88c77840-78ae-408b-b464-e7b341393147
+    id: image_resize
+    weight: -9
+    data:
+      width: 267
+      height: 200
+  f464e4ba-6f76-45b2-b776-46c87ec159fb:
+    uuid: f464e4ba-6f76-45b2-b776-46c87ec159fb
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: related_blogs_image

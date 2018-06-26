@@ -1,0 +1,19 @@
+uuid: 5e24ea5f-84be-437f-ab91-88d6e7795936
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_service_process_points
+field_name: field_service_process_points
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

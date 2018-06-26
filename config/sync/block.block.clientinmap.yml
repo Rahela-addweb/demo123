@@ -1,0 +1,35 @@
+uuid: 4ae53758-cf26-4327-8591-f00ff494bf43
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8280bab6-3493-4171-9fea-372de83d873a'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: clientinmap
+theme: addweb
+region: content_bottom
+weight: -26
+provider: null
+plugin: 'block_content:8280bab6-3493-4171-9fea-372de83d873a'
+settings:
+  id: 'block_content:8280bab6-3493-4171-9fea-372de83d873a'
+  label: 'Client In Map'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /client-in-map
+    negate: false
+    context_mapping: {  }

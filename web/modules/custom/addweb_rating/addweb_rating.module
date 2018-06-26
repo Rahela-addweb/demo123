@@ -1,0 +1,64 @@
+<?php
+use Drupal\node\NodeInterface;
+use Drupal\node\NodeTypeInterface;
+
+function addweb_rating_theme($existing, $type, $theme, $path) {
+  return [
+    'addweb_rating' => [
+    ]
+  ];
+}
+
+
+// For rating url
+function addweb_rating_preprocess(&$variables, $hook){
+
+  $variables['base_path'] = base_path();
+  global $base_url;  
+  $variables['base_url'] = $base_url;
+  $request = \Drupal::request();
+  $current_path = $request->getPathInfo();
+
+  // For rating data 
+   $variables['current_rating_url'] = $current_path;
+ 
+        $rateip = \Drupal::request()->getClientIp();
+        $selectQuery = "SELECT * FROM addweb_rating";
+        $result = db_query($selectQuery)->fetchAll();
+        foreach ($result as $key_rate => $value_rate) {
+          $ip[] = $value_rate->ip;
+          $newclientCount[] = $value_rate->total_client;
+          $rate_url[] = $value_rate->url;
+        }
+
+        $flag_query = "SELECT COUNT(rateid) FROM addweb_rating WHERE ip='$rateip' AND url='$current_path'";
+        $flag_query_result = db_query($flag_query)->fetchField();
+      
+        $client_total = "SELECT total_client FROM addweb_rating WHERE url='$current_path'";
+        $client_total_result = db_query($client_total)->fetchAll();
+        foreach ($client_total_result as $key_client => $value_client) {
+          $clientCount[] = $value_client->total_client;
+        }
+
+        $end_count_num =  end($clientCount);
+         $variables['client_count'] = $end_count_num;
+         $test = $variables['client_count'];
+         
+         if($flag_query_result == 0 && in_array($current_path, $rate_url)) {
+          $variables['flag'] = 2;
+        }
+        elseif(in_array($rateip, $ip) && in_array($current_path, $rate_url)) {
+          $variables['flag'] = 1;
+        }
+       
+        elseif(in_array($rateip, $ip) && !in_array($current_path, $rate_url)) {
+          $variables['flag'] = 3;
+        }
+        elseif(!in_array($rateip, $ip) && !in_array($current_path, $rate_url)) {
+          $variables['flag'] = 0;
+        }
+
+}
+
+
+

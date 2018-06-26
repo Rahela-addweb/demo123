@@ -1,0 +1,81 @@
+uuid: 4fbdef0c-f4bb-4458-865a-40c73ada14f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.careers.field_body
+    - field.field.paragraph.careers.field_career_technologies
+    - field.field.paragraph.careers.field_end_date
+    - field.field.paragraph.careers.field_job_position
+    - field.field.paragraph.careers.field_start_date
+    - field.field.paragraph.careers.field_technical_skill
+    - field.field.paragraph.careers.field_technology
+    - field.field.paragraph.careers.field_title
+    - paragraphs.paragraphs_type.careers
+  module:
+    - datetime
+id: paragraph.careers.default
+targetEntityType: paragraph
+bundle: careers
+mode: default
+content:
+  field_body:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_end_date:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_job_position:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_start_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_technical_skill:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_technology:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_career_technologies: true
+  status: true
+  uid: true

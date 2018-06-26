@@ -1,0 +1,19 @@
+uuid: 868c4bcf-b61d-41f6-a7f2-712bf42403f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_join_us_title
+    - paragraphs.paragraphs_type.product_join_us_block
+id: paragraph.product_join_us_block.field_join_us_title
+field_name: field_join_us_title
+entity_type: paragraph
+bundle: product_join_us_block
+label: 'Join Us Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

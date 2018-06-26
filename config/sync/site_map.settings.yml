@@ -1,0 +1,56 @@
+page_title: 'Site map'
+message:
+  value: ''
+  format: restricted_html
+show_front: false
+show_titles: false
+show_blogs: true
+show_books: {  }
+books_expanded: true
+show_menus:
+  sitemap: sitemap
+  account: '0'
+  admin: '0'
+  footer: '0'
+  main: '0'
+  main-navigation-left: '0'
+  main-navigation-right: '0'
+  quick-links: '0'
+  social-media: '0'
+  tools: '0'
+show_menus_hidden: false
+show_faq: false
+show_vocabularies:
+  job_position: '0'
+  seo_tags: '0'
+  tags: '0'
+  technology: '0'
+  user_skills: '0'
+show_description: true
+show_count: true
+vocabulary_depth: -1
+term_threshold: 0
+forum_threshold: -1
+rss_front: rss.xml
+show_rss_links: 1
+rss_taxonomy: -1
+css: false
+order:
+  front: -50
+  menus_account: -50
+  menus_admin: -50
+  menus_footer: -50
+  menus_main: -50
+  menus_main-navigation-left: -50
+  menus_main-navigation-right: -50
+  menus_quick-links: -50
+  menus_sitemap: -50
+  menus_social-media: -50
+  menus_tools: -50
+  vocabularies_job_position: -50
+  vocabularies_seo_tags: -50
+  vocabularies_tags: -50
+  vocabularies_technology: -50
+  vocabularies_user_skills: -50
+_core:
+  default_config_hash: NKXnGL9CQi4L1euw05u9IYwElZuW7EOCs-5iXqe3qKc

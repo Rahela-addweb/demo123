@@ -1,0 +1,23 @@
+uuid: 047bd5a2-14e1-41e4-992f-4da6764383a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_technolgy_metatag
+    - taxonomy.vocabulary.technology
+  module:
+    - metatag
+id: taxonomy_term.technology.field_technolgy_metatag
+field_name: field_technolgy_metatag
+entity_type: taxonomy_term
+bundle: technology
+label: 'Technology Metatags'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

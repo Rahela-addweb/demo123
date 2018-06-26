@@ -1,0 +1,22 @@
+uuid: d0a1d228-d318-4e82-8bb5-1850211e04bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: user_image
+label: 'User Image'
+effects:
+  2b9536f3-4c58-425c-b28d-3e4ae12f0390:
+    uuid: 2b9536f3-4c58-425c-b28d-3e4ae12f0390
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 36
+      height: 36
+  eecaf392-3e1c-4165-a1e0-e93cdcfc3d1f:
+    uuid: eecaf392-3e1c-4165-a1e0-e93cdcfc3d1f
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: user_image

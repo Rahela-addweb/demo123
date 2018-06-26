@@ -1,0 +1,30 @@
+uuid: 7e122386-9005-4c04-b2b5-2f080a616f7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - news_view_alter
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: datearchive
+theme: addweb
+region: sidebar_second
+weight: -23
+provider: null
+plugin: date_archive
+settings:
+  id: date_archive
+  label: 'Date Archive'
+  provider: news_view_alter
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /news
+    negate: false
+    context_mapping: {  }

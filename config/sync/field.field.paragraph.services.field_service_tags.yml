@@ -1,0 +1,28 @@
+uuid: 1fcb8e26-16b0-4bdb-bed7-f8dfbabdc0a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_tags
+    - paragraphs.paragraphs_type.services
+    - taxonomy.vocabulary.technology
+id: paragraph.services.field_service_tags
+field_name: field_service_tags
+entity_type: paragraph
+bundle: services
+label: 'Service Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technology: technology
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

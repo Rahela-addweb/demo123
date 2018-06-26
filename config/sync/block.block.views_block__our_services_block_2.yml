@@ -1,0 +1,28 @@
+uuid: b3c9bccb-051e-47b5-ba60-cbd0ee91c8cc
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.our_services
+  module:
+    - block_class
+    - views
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__our_services_block_2
+theme: addweb
+region: content
+weight: -17
+provider: null
+plugin: 'views_block:our_services-block_2'
+settings:
+  id: 'views_block:our_services-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,111 @@
+uuid: 45dc724c-785d-45a0-8362-8ae60eb68db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_team_description
+    - field.field.user.user.field_user_favorite_line
+    - field.field.user.user.field_user_fun_fact
+    - field.field.user.user.field_user_join_date
+    - field.field.user.user.field_user_second_image
+    - field.field.user.user.field_user_skills
+    - field.field.user.user.field_user_team_testimonial
+    - field.field.user.user.field_user_when_not_working
+    - field.field.user.user.user_picture
+  module:
+    - datetime
+    - field_formatter_class
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_team_description:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_user_favorite_line:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user_fun_fact:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user_join_date:
+    weight: 9
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_user_second_image:
+    weight: 10
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_user_skills:
+    weight: 13
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_label
+    region: content
+  field_user_team_testimonial:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_user_when_not_working:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  member_for:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    label: hidden
+hidden:
+  simplenews: true

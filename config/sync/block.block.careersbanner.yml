@@ -1,0 +1,35 @@
+uuid: c4cbbb04-c034-464e-87fa-752003e07deb
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:header_banner:ba9fdea5-43b8-4f53-bbd7-d6a0be57f074'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: home-banner-img
+id: careersbanner
+theme: addweb
+region: banner_image
+weight: 0
+provider: null
+plugin: 'block_content:ba9fdea5-43b8-4f53-bbd7-d6a0be57f074'
+settings:
+  id: 'block_content:ba9fdea5-43b8-4f53-bbd7-d6a0be57f074'
+  label: 'Careers Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /careers
+    negate: false
+    context_mapping: {  }

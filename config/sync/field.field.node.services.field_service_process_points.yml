@@ -1,0 +1,21 @@
+uuid: d84c17fa-1605-4249-866c-5b7a676dd409
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_process_points
+    - node.type.services
+  module:
+    - text
+id: node.services.field_service_process_points
+field_name: field_service_process_points
+entity_type: node
+bundle: services
+label: 'Service process points'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

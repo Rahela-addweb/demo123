@@ -1,0 +1,24 @@
+uuid: 6332ed84-e42a-4520-b5b1-5fe4aad5ad68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.simple_mega_menu.home.field_body
+    - simple_megamenu.simple_mega_menu_type.home
+  module:
+    - text
+id: simple_mega_menu.home.default
+targetEntityType: simple_mega_menu
+bundle: home
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  name: true
+  user_id: true

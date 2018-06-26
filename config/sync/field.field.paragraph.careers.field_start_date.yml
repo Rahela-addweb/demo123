@@ -1,0 +1,24 @@
+uuid: 754b876a-b6db-4c83-a814-75e59303ef07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_date
+    - paragraphs.paragraphs_type.careers
+  module:
+    - datetime
+id: paragraph.careers.field_start_date
+field_name: field_start_date
+entity_type: paragraph
+bundle: careers
+label: 'Start Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

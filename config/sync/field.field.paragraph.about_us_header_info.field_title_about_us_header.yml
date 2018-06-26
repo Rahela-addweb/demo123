@@ -1,0 +1,21 @@
+uuid: f585e9f0-3896-4fc8-886b-db28d57ec533
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_about_us_header
+    - paragraphs.paragraphs_type.about_us_header_info
+  module:
+    - text
+id: paragraph.about_us_header_info.field_title_about_us_header
+field_name: field_title_about_us_header
+entity_type: paragraph
+bundle: about_us_header_info
+label: 'Title About us Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,23 @@
+uuid: d933a091-951a-4a29-89ee-df7175ce9c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_about_us_membership_link
+    - paragraphs.paragraphs_type.about_us_certification_and_membe
+  module:
+    - link
+id: paragraph.about_us_certification_and_membe.field_about_us_membership_link
+field_name: field_about_us_membership_link
+entity_type: paragraph
+bundle: about_us_certification_and_membe
+label: 'About US Membership Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

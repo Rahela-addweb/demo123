@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!-- Blog post -->
+<div class="blogs-wrapper">
+  <div class="blogs-upper">
+    <div class="blogs-upper-left">
+      <div class="views-field views-field-field-image">
+        <div class="field-content blog-image"> 
+          {% if fields.field_blog_image.content | length > 0 %}
+            {{ fields.field_blog_image.content }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="blogs-upper-right">
+      <div class="views-field views-field-field-tags tags">
+        <div class="field-content blog-tags">
+          {{ fields.field_technology.content }}
+          {% set tags=fields.field_seo_tags.content|render %}
+          {% if tags is not empty %}
+            {% if fields.field_technology.content|render is not empty %}{{'/ '}}{% endif %}{{ fields.field_seo_tags.content }}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="views-field views-field-title">
+        <h2 class="field-content">
+          {% if fields.title.content | length > 0 %}
+            {{ fields.title.content }}
+          {% endif %}
+        </h2>
+      </div>
+
+      <div class="views-field views-field-body">
+        <div class="field-content body">
+          {% if fields.body.content | length > 0 %}
+            {{ fields.body.content }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="blogs-bottom">
+    <div class="blog-main-bootom">
+      <div class="blog-author-image">
+        {% if fields.user_picture.content | length > 0 %}
+          {{ fields.user_picture.content }}
+        {% endif %}
+      </div>
+      <div class="views-field views-field-field-blog-author author-name">
+        <div class="field-content blog-author-name">
+          {% if fields.uid.content | length > 0 %}
+            <a href="{{base_path}}blog-author/{{ fields.name.content|replace({' ': '-'})|lower }}/my-blogs" title="{{ uid }}">{{ fields.uid.content }}</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="views-field views-field-created post-date">
+        <div class="field-content blog-post-date">
+          {% if fields.created.content | length > 0 %}
+            {{ fields.created.content }}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="views-field views-field-comment-count comment-count">
+        <div class="field-content blog-comment-count">
+            {{ fields.entity_id.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End -->

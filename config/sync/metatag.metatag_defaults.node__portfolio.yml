@@ -1,0 +1,28 @@
+uuid: e98f2fa6-d031-494f-9291-c9975d673302
+langcode: en
+status: true
+dependencies: {  }
+id: node__portfolio
+label: 'Content: Portfolio'
+tags:
+  keywords: 'AddWebSolution Pvt. Ltd'
+  referrer: no-referrer
+  description: '[node:summary]'
+  canonical_url: '[current-page:url:absolute]'
+  shortlink: '[current-page:url:unaliased]'
+  title: '[node:title] | Addweb Solution'
+  robots: 'index, follow'
+  og_updated_time: '[node:changed:custom:c]'
+  og_type: Article
+  article_published_time: '[node:created:custom:c]'
+  og_description: '[node:summary]'
+  og_image: '[node:field_portfolio_image]'
+  article_modified_time: '[node:changed:custom:c]'
+  og_title: '[node:title] | Addweb Solution'
+  og_image_url: '[node:field_portfolio_image]'
+  og_url: '[current-page:url:absolute]'
+  twitter_cards_title: '[node:title] | Addweb Solution'
+  twitter_cards_page_url: '[current-page:url:absolute]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_portfolio_image]'
+  twitter_cards_type: summary

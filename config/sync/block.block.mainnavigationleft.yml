@@ -1,0 +1,28 @@
+uuid: c866cc51-07c5-4e7b-8345-6a35c4fb2d5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-navigation-left
+  module:
+    - block_class
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: 'main-menu main-menu-left'
+id: mainnavigationleft
+theme: addweb
+region: navigation
+weight: -15
+provider: null
+plugin: 'system_menu_block:main-navigation-left'
+settings:
+  id: 'system_menu_block:main-navigation-left'
+  label: 'Main Navigation Left'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,34 @@
+uuid: 9afb92ec-1bf2-47f1-8bb3-7f85b6110e72
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - simplenews
+    - system
+  theme:
+    - addweb
+third_party_settings:
+  block_class:
+    classes: ''
+id: simplenewssubscription
+theme: addweb
+region: content_bottom
+weight: -23
+provider: null
+plugin: simplenews_subscription_block
+settings:
+  id: simplenews_subscription_block
+  label: 'Stay in Touch'
+  provider: simplenews
+  label_display: visible
+  newsletters:
+    default: default
+  message: 'Want to stay updated about what''s happening at our end? We are friendly and don’t spam, promise..!!'
+  unique_id: 17b04ba7-698e-421a-9d42-8de68933bafd
+visibility:
+  request_path:
+    id: request_path
+    pages: "/blogs\r\n/careers\r\n/contact\r\n/blog/*"
+    negate: false
+    context_mapping: {  }
