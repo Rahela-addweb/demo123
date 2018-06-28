@@ -1,12 +1,12 @@
-uuid: 6fbb5a7a-9eb6-4d66-9efa-373149caf330
+uuid: 482af959-219e-4107-ae9a-efcce775aa9b
 langcode: en
 status: true
 dependencies: {  }
-id: live_split
-label: 'live split'
-folder: ../config/sync-live
+id: dev_split
+label: 'dev split'
+folder: ../config/sync-dev
 module:
-  tawk_to: 0
+  shield: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
