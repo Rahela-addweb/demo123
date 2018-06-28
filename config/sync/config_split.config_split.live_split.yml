@@ -6,6 +6,7 @@ id: live_split
 label: 'live split'
 folder: ../config/sync-live
 module:
+  shield: 0
   tawk_to: 0
 theme: {  }
 blacklist: {  }
