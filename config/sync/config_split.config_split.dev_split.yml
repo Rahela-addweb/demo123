@@ -4,9 +4,9 @@ status: true
 dependencies: {  }
 id: dev_split
 label: 'dev split'
-folder: ../config/sync-dev
+folder: ../config/dev
 module:
-  shield: 0
+  tawk_to: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
