@@ -1,10 +1,10 @@
-uuid: 482af959-219e-4107-ae9a-efcce775aa9b
+uuid: 2077d50f-8c64-4d93-98cf-3c1d6ce58f43
 langcode: en
 status: true
 dependencies: {  }
-id: dev_split
-label: 'dev split'
-folder: ../config/dev
+id: stag_split
+label: 'stag split'
+folder: ../config/stag
 module:
   tawk_to: 0
 theme: {  }
